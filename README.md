@@ -125,5 +125,7 @@ node scripts/cli.cjs render --draft --script examples/cosmic/script.json --secon
 - **やくみ組素材:** [学習・解説動画への利用・収益化を許可](ASSET-LICENSE.md)。作品や作者になりすますことはできません。
 - **フォント:** 各同梱OFLに従います。[第三者ライセンス](THIRD_PARTY_NOTICES.md)
 
-制作した動画には、説明欄に「キャラクター素材：やくみ組 / https://github.com/Cosm0rder/yakumigumi-learning-video」と書いていただけると助かります。
+クレジットは任意ですが、動画の説明欄に次のように書いていただけると助かります。
+
+> キャラクター素材：やくみ組 / [制作キット](https://github.com/Cosm0rder/yakumigumi-learning-video)
 
