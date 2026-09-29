@@ -121,11 +121,10 @@ node scripts/cli.cjs render --draft --script examples/cosmic/script.json --secon
 
 ## 利用条件
 
-- **コード:** [MIT License](LICENSE)
-- **やくみ組素材:** [学習・解説動画への利用・収益化を許可](ASSET-LICENSE.md)。作品や作者になりすますことはできません。
+- **コード・台本・ドキュメント・やくみ組素材:** [MIT License](LICENSE)。用途を限定せず、改変・再配布・商用利用ができます。[素材への適用範囲](ASSET-LICENSE.md)
+- **複製・再配布時:** MITの条件に従い、著作権表示とライセンス全文を保持してください。
 - **フォント:** 各同梱OFLに従います。[第三者ライセンス](THIRD_PARTY_NOTICES.md)
 
 クレジットは任意ですが、動画の説明欄に次のように書いていただけると助かります。
 
 > キャラクター素材：やくみ組 / [制作キット](https://github.com/Cosm0rder/yakumigumi-learning-video)
-
