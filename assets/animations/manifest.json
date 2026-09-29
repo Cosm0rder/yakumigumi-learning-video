@@ -1,0 +1,53 @@
+{
+  "size": 256,
+  "fps": 12,
+  "frames": 24,
+  "columns": 6,
+  "rows": 4,
+  "duration": 2,
+  "loop": true,
+  "alpha": true,
+  "actions": {
+    "idle": {
+      "label": "待つ",
+      "sheet": "idle.png",
+      "preview": "../../docs/animations/idle.gif"
+    },
+    "wave": {
+      "label": "手を振る",
+      "sheet": "wave.png",
+      "preview": "../../docs/animations/wave.gif"
+    },
+    "nod": {
+      "label": "うなずく",
+      "sheet": "nod.png",
+      "preview": "../../docs/animations/nod.gif"
+    },
+    "think": {
+      "label": "考える",
+      "sheet": "think.png",
+      "preview": "../../docs/animations/think.gif"
+    },
+    "point": {
+      "label": "指さして説明",
+      "sheet": "point.png",
+      "preview": "../../docs/animations/point.gif"
+    },
+    "cheer": {
+      "label": "喜ぶ",
+      "sheet": "cheer.png",
+      "preview": "../../docs/animations/cheer.gif"
+    },
+    "walk": {
+      "label": "歩く",
+      "sheet": "walk.png",
+      "preview": "../../docs/animations/walk.gif"
+    },
+    "surprise": {
+      "label": "驚く",
+      "sheet": "surprise.png",
+      "preview": "../../docs/animations/surprise.gif"
+    }
+  }
+}
+

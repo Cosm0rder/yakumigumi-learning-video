@@ -1,0 +1,22 @@
+{
+  "name": "yakumigumi-learning-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "やくみ組の教材アニメをローカルで作る、API接続のない制作キット",
+  "type": "commonjs",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "doctor": "node scripts/cli.cjs doctor",
+    "demo": "node scripts/cli.cjs render --draft --width 1280 --fps 24",
+    "render": "node scripts/cli.cjs render",
+    "stills": "node scripts/cli.cjs stills --draft",
+    "narration": "node scripts/cli.cjs narration",
+    "characters": "node scripts/characters.cjs",
+    "preview": "node scripts/preview.cjs",
+    "test": "node --test test/*.test.cjs",
+    "audit": "node scripts/audit.cjs",
+    "smoke": "node scripts/offline-smoke.cjs"
+  },
+  "dependencies": { "@napi-rs/canvas": "1.0.9" }
+}
+
