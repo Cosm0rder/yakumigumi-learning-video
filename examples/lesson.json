@@ -1,0 +1,46 @@
+{
+  "title": "やくみ組と学ぶ、比例ってなに？",
+  "scenes": [
+    {
+      "id": "lesson01", "kind": "lesson", "stage": "問い", "title": "数が2倍になると、値段も2倍？",
+      "visual": { "layout": "cards", "heading": "りんご1個は100円", "items": [{"label":"1個", "value":"100円"}, {"label":"2個", "value":"？円"}], "note": "1個あたりの値段が変わらないとき" },
+      "lines": [
+        {"id":"l001", "speaker":"daikon", "text":"りんごが1個100円なら、2個買うといくらになるの？"},
+        {"id":"l002", "speaker":"shoga", "text":"200円だよ。今日は、数と値段が一緒に増える関係を見てみよう！"}
+      ]
+    },
+    {
+      "id": "lesson02", "kind": "lesson", "stage": "具体例", "title": "個数と合計金額を比べよう",
+      "visual": { "layout": "bars", "heading": "個数が増えると、合計も増える", "items": [{"label":"1個", "value":100}, {"label":"2個", "value":200}, {"label":"3個", "value":300}], "unit":"円", "note":"どの場合も、1個100円" },
+      "lines": [
+        {"id":"l003", "speaker":"shoga", "text":"1個なら100円、2個なら200円、3個なら300円。棒の長さも見てね。"},
+        {"id":"l004", "speaker":"garlic", "text":"個数が2倍、3倍になると、合計も2倍、3倍になっているね。"}
+      ]
+    },
+    {
+      "id": "lesson03", "kind": "lesson", "stage": "しくみ", "title": "この関係を「比例」と呼ぶ",
+      "visual": { "layout": "steps", "heading": "合計金額の求め方", "items": [{"label":"個数", "value":"3個"}, {"label":"1個の値段", "value":"×100円"}, {"label":"合計", "value":"300円"}], "note":"合計金額 ÷ 個数 は、いつも100円" },
+      "lines": [
+        {"id":"l005", "speaker":"shoga", "text":"片方が2倍、3倍になると、もう片方も2倍、3倍になる。これが比例だよ。"},
+        {"id":"l006", "speaker":"daikon", "text":"合計を個数で割ると、いつも同じ値になるんだね。"}
+      ]
+    },
+    {
+      "id": "lesson04", "kind": "lesson", "stage": "確認", "title": "では、4個なら？",
+      "visual": { "layout": "question", "heading": "1個100円のりんごを4個買うと？", "question":"合計は、いくら？", "answer":"4 × 100 = 400円", "revealAtLine":1, "note":"答えが出る前に、少し考えてみよう" },
+      "lines": [
+        {"id":"l007", "speaker":"chili", "text":"ここで問題！ 同じりんごを4個買うと、合計はいくらになるかな？"},
+        {"id":"l008", "speaker":"shoga", "text":"答えは400円！ 4個かける100円で、合計が出せるよ。"}
+      ]
+    },
+    {
+      "id": "lesson05", "kind": "lesson", "stage": "まとめ", "title": "「同じ割合」がポイント",
+      "visual": { "layout": "cards", "heading": "比例を見つける2つの見方", "items": [{"label":"倍の関係", "value":"2倍なら2倍"}, {"label":"割った値", "value":"いつも一定"}], "note":"まとめ買い割引など、条件が変わる場合には注意" },
+      "lines": [
+        {"id":"l009", "speaker":"garlic", "text":"ただし、まとめ買いで割引になるなら、同じ関係とは限らないよ。条件も確かめようね。"},
+        {"id":"l010", "speaker":"shoga", "text":"同じ割合で増えるか、割った値が一定か。身近なところで比例を探してみよう！"}
+      ]
+    }
+  ]
+}
+
