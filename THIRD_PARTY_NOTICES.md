@@ -1,5 +1,7 @@
 # 第三者素材・依存パッケージ
 
+本キット独自のコード・台本・ドキュメント・やくみ組素材は [MIT License](LICENSE) です。以下の第三者素材・依存パッケージは、各ライセンスに従います。
+
 - **Noto Sans JP**: Google Fonts配布。`assets/fonts/NotoSansJP.ttf` と同フォルダーの `OFL-NotoSansJP.txt`。SIL Open Font License 1.1。
   - https://github.com/google/fonts/tree/main/ofl/notosansjp
 - **Dela Gothic One**: `assets/v2/DelaGothicOne-Regular.ttf` と `OFL-DelaGothicOne.txt`。SIL Open Font License 1.1。
@@ -10,4 +12,3 @@
   - https://ffmpeg.org/
 
 やくみ組の原案は原作者によるものです。ドット絵素材と動作アトラスはその原案をもとに作られた制作資産です。宇宙編の脚本・JavaScript演出はClaude Codeによる制作物を再利用し、このキットではCodexが移植・実行手順・汎用レイアウト・モーションの呼び出し口・検証を整えています。
-

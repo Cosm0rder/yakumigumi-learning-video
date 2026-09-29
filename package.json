@@ -1,6 +1,7 @@
 {
   "name": "yakumigumi-learning-video",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "description": "やくみ組の教材アニメをローカルで作る、API接続のない制作キット",
   "type": "commonjs",
@@ -19,4 +20,3 @@
   },
   "dependencies": { "@napi-rs/canvas": "1.0.9" }
 }
-
