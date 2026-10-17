@@ -124,6 +124,8 @@ npm run smoke
 3. `idle` の身体の高さを基準に、全ポーズがcanvasへ収まる共通倍率を求める。
 4. 同じ倍率を全ポーズに使い、身体の底面を `(128,240)` へnearest-neighborで配置する。おじぎなどの元の高さ差を保つ。
 
+正規化の参照画素は [nearest-sampling.json](../assets/pixel/nearest-sampling.json) に従って整数比で決め、ちょうど同距離になる境界の選択だけを固定して既存素材を保ちます。native Canvasの浮動小数による拡縮は使いません。元画像・正規化ポーズのハッシュと切り出し範囲・配置先を照合し、条件が変わった記録は流用しません。
+
 すだちの `walk` と `point` は、原画の身体から離れた動きの線を保持するため、実効的な切り出し範囲だけを拡張しています。元PNGと `keypose-exact-bounds.json` の元の境界は保持し、`bodyTight` で身体の範囲を別に指定して足元の基準点を保ちます。`poseProvenance` には元画像、実効範囲、身体範囲、倍率、配置先、alpha閾値を記録しています。
 
 既存の `assets/animations/` のしょうが8モーション、`docs/animations/` のGIF、従来の動画レンダラーは変更していません。利用条件は [ASSET-LICENSE.md](../ASSET-LICENSE.md)、[LICENSE](../LICENSE) と各フォントのOFLを参照してください。

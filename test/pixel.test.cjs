@@ -180,13 +180,16 @@ test('pixel manifest includes exactly the fifteen confirmed characters and their
 });
 
 test('all characters and variants use ten distinct supplied poses with exact source provenance and common scale',{skip:pending},async()=>{
-  const m=manifest();
+  const m=manifest(),sampling=JSON.parse(fs.readFileSync(path.join(PIXEL_ROOT,'nearest-sampling.json'),'utf8'));
+  assert.equal(sampling.schemaVersion,1);assert.equal(sampling.coordinateRule,'pixel-center-nearest');assert.equal(sampling.defaultTie,'upper');
+  assert.deepEqual(Object.keys(sampling.poses).sort(),assetEntries(m).flatMap(([id])=>MOTIONS.map(action=>id+'/'+action)).sort(),'sampling registry covers exactly all 170 poses');
   for(const [id,entry] of assetEntries(m)){
     assert.equal(entry.source.kind,'imagegen-keypose-sheet',`${id}: supplied expression source`);
     assert.equal(entry.source.masterUnmodified,true,`${id}: source master preservation`);
     assert.deepEqual(Object.keys(entry.keyposes).sort(),MOTIONS.slice().sort(),`${id}: supplied pose list`);
     assert.deepEqual(Object.keys(entry.poseProvenance).sort(),MOTIONS.slice().sort(),`${id}: provenance list`);
     assert.equal(entry.base,entry.keyposes.idle,`${id}: neutral is the supplied idle pose`);
+    assert.equal(sha256(fs.readFileSync(assetFile(entry.source.path))),sampling.masters[entry.source.path],id+': untouched source master SHA256');
     const sourceImage=await loadImage(assetFile(entry.source.path));
     const sourceCanvas=createCanvas(sourceImage.width,sourceImage.height);
     sourceCanvas.getContext('2d').drawImage(sourceImage,0,0);
@@ -230,11 +233,29 @@ test('all characters and variants use ten distinct supplied poses with exact sou
       assert.equal(edges,0,`${label}: no opaque source pixels cut at the padded crop edge`);
       context.putImageData(data,0,0);
       const expected=createCanvas(256,256),expectedContext=expected.getContext('2d');expectedContext.imageSmoothingEnabled=false;
-      expectedContext.drawImage(crop,0,0,w,h,...expectedRect);
+      // Independent oracle: do not use the production sampler or native scaled drawImage.
+      const record=sampling.poses[label];assert.ok(record,`${label}: fixed sampling record`);
+      assert.equal(record.sheet,entry.source.path);assert.deepEqual(record.cell,p.cell);assert.deepEqual(record.targetRect,expectedRect);assert.equal(record.alphaCutoff,p.alphaCutoff);
+      assert.deepEqual(Object.keys(record.lowerTies).sort(),['x','y'],`${label}: sampling axes`);
+      const [rx,ry,rw,rh]=expectedRect,sourcePixels=context.getImageData(0,0,w,h).data,reference=expectedContext.createImageData(rw,rh);
+      const axes=[];
+      for(const [name,sourceSize,targetSize] of [['x',w,rw],['y',h,rh]]){
+        const lower=record.lowerTies[name];assert.ok(Array.isArray(lower));
+        assert.deepEqual(lower,[...new Set(lower)].sort((a,b)=>a-b),`${label}: distinct ordered boundary positions`);
+        for(const index of lower){assert.ok(Number.isInteger(index)&&index>=0&&index<targetSize);assert.equal(((2*index+1)*sourceSize)%(2*targetSize),0,`${label}: only exact equidistant pixels may select the lower neighbor`);}
+        axes.push(Array.from({length:targetSize},(_,index)=>Math.floor(((2*index+1)*sourceSize)/(2*targetSize))-(lower.includes(index)?1:0)));
+      }
+      for(let row=0;row<rh;row++)for(let col=0;col<rw;col++){
+        const from=(axes[1][row]*w+axes[0][col])*4,to=(row*rw+col)*4;
+        for(let channel=0;channel<4;channel++)reference.data[to+channel]=sourcePixels[from+channel];
+      }
+      expectedContext.putImageData(reference,rx,ry);
       const filename=assetFile(entry.keyposes[action]);assertRgbaPng(filename,256,256);
+      assert.equal(sha256(fs.readFileSync(filename)),record.pngSha256,`${label}: preserved pose PNG SHA256`);
       const actual=createCanvas(256,256);actual.getContext('2d').drawImage(await loadImage(filename),0,0);
       assertTransparentContent(actual,label);
       const actualPixels=pixels(actual),expectedPixels=pixels(expected);
+      assert.equal(sha256(actualPixels),record.rgbaSha256,`${label}: preserved pose RGBA SHA256`);
       const exact=actualPixels.equals(expectedPixels);
       let diagnostics='';
       if(!exact){

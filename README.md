@@ -102,7 +102,7 @@ npm run pixel:demo -- shoga  # しょうがの10動作を並べた4秒MP4
 npm run pixel:cast          # 15キャラを10動作順に見せる20秒MP4
 ```
 
-新原画は ImageGen による多色・部分透明を含むピクセル風画像です。元PNGを保持し、nearest-neighborで配置しています。既存のしょうが8モーションと動画レンダラーも引き続き利用できます。
+新原画は ImageGen による多色・部分透明を含むピクセル風画像です。元PNGを保持し、正規化時はnearest-neighborの同距離境界での選択を [nearest-sampling.json](assets/pixel/nearest-sampling.json) に固定して既存素材を再現します。既存のしょうが8モーションと動画レンダラーも引き続き利用できます。
 
 生成済み素材は用途別のDrive納品パックでも提供します。公開checkoutでは上記の `npm run pixel:build` で同じ形式の素材を再生成できます。
 

@@ -25,6 +25,8 @@ jobs:
             sudo apt-get install -y ffmpeg
           fi
           npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify exact source pose sampling
+        run: node scripts/pixel-keyposes.cjs --check
       - name: Generate all pixel motions
         run: npm run pixel:build
       - run: npm test
