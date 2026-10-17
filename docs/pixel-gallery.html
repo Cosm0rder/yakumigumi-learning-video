@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>やくみ組 ドット素材ギャラリー</title>
+  <style>
+    :root { --ink:#293129; --muted:#627062; --paper:#f5f4eb; --line:#dbdfce; --green:#286443; --lime:#dce9a8; --stage:#f7f9ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.65 system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif; }
+    a { color:var(--green); text-underline-offset:3px; }
+    a:hover { text-decoration-thickness:2px; }
+    button, select, input { font:inherit; }
+    button, select { min-height:42px; border:1px solid #b9c4ad; border-radius:9px; background:#fff; color:var(--ink); padding:8px 13px; }
+    button { cursor:pointer; }
+    button:hover { border-color:var(--green); }
+    button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline:3px solid #73a4da; outline-offset:3px; }
+    button:disabled { opacity:.5; cursor:default; }
+    main { max-width:1440px; margin:auto; padding:46px 32px 56px; }
+    .eyebrow { margin:0 0 12px; color:var(--green); font-size:12px; font-weight:800; letter-spacing:.16em; }
+    h1 { font-size:clamp(27px,4vw,42px); line-height:1.3; letter-spacing:.03em; margin:0 0 16px; }
+    .intro { max-width:720px; color:var(--muted); margin:0; }
+    .headline { display:flex; justify-content:space-between; align-items:start; gap:28px; }
+    .nav { display:flex; flex-wrap:wrap; gap:12px; font-size:13px; margin-top:8px; }
+    .stats { display:flex; gap:9px; flex-wrap:wrap; margin:24px 0; }
+    .stat { display:flex; gap:8px; align-items:center; padding:7px 13px; border:1px solid var(--line); border-radius:100px; background:#fff; font-size:13px; }
+    .stat strong { font-size:17px; }
+    .toolbar { border:1px solid var(--line); background:#ffffffdf; border-radius:16px; padding:18px; display:flex; align-items:end; gap:16px; flex-wrap:wrap; }
+    .field { display:flex; flex-direction:column; gap:5px; }
+    .field > span, .group-label { font-size:12px; font-weight:700; color:var(--muted); }
+    .field select { min-width:150px; }
+    .play { background:var(--green); color:#fff; border-color:var(--green); font-weight:700; min-width:122px; }
+    .backgrounds { display:flex; gap:5px; margin-top:5px; }
+    .backgrounds button { padding:7px 10px; min-height:42px; font-size:13px; }
+    .backgrounds button[aria-pressed="true"] { background:var(--lime); border-color:var(--green); }
+    .timeline { display:flex; align-items:center; gap:10px; margin:15px 2px 0; }
+    .timeline input { flex:1; min-width:80px; accent-color:var(--green); }
+    .timeline label, .timeline output { font:12px ui-monospace,"SFMono-Regular",Consolas,monospace; color:var(--muted); white-space:nowrap; }
+    .note { color:var(--muted); font-size:12px; margin:12px 2px 0; }
+    #status { min-height:24px; margin:26px 0 8px; color:var(--muted); font-size:13px; }
+    .character { margin:26px 0 42px; }
+    .variant-heading { grid-column:1 / -1; border-top:2px solid var(--line); margin-top:30px; padding-top:24px; }
+    .variant-heading h2 { margin:0 0 6px; font-size:24px; }
+    .variant-heading p { margin:0; color:var(--muted); font-size:13px; }
+    .variant-badge { color:var(--green); background:#edf3dd; padding:2px 7px; border-radius:4px; font-size:11px; }
+    .character-header { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:1px solid var(--line); margin-bottom:16px; padding-bottom:12px; }
+    .character-header h2 { margin:0; font-size:24px; }
+    .character-id { font:12px ui-monospace,"SFMono-Regular",Consolas,monospace; color:var(--muted); }
+    .character-header p { flex-basis:100%; margin:0; color:var(--muted); font-size:12px; }
+    .base-link { margin-left:auto; font-size:12px; }
+    .grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+    #gallery.motion-comparison { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; align-items:start; }
+    .motion-comparison .character { margin:22px 0 0; }
+    .motion-comparison .character-header h2 { font-size:20px; }
+    .motion-comparison .character-header { gap:8px; }
+    .motion-comparison .grid { display:block; }
+    .card { border:1px solid var(--line); border-radius:14px; background:#fff; overflow:hidden; min-width:0; }
+    .stage { background-color:var(--stage); background-image:linear-gradient(45deg,#dfe5d3 25%,transparent 25%),linear-gradient(-45deg,#dfe5d3 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dfe5d3 75%),linear-gradient(-45deg,transparent 75%,#dfe5d3 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0; padding:8px; }
+    body[data-background="white"] .stage { background:#fff; }
+    body[data-background="dark"] .stage { background:#263a37; }
+    body[data-background="green"] .stage { background:#18bc54; }
+    canvas { display:block; width:100%; height:auto; aspect-ratio:1; image-rendering:pixelated; image-rendering:crisp-edges; }
+    .card-body { padding:13px; }
+    .card h3 { margin:0 0 1px; font-size:15px; }
+    .motion-id { margin:0 0 9px; font:11px ui-monospace,"SFMono-Regular",Consolas,monospace; color:var(--muted); }
+    .downloads { display:flex; gap:6px; flex-wrap:wrap; }
+    .downloads a { font-size:11px; font-weight:700; padding:3px 7px; border:1px solid var(--line); border-radius:5px; text-decoration:none; }
+    .downloads a:hover { background:#edf3dd; }
+    details { margin-top:8px; color:var(--muted); font-size:11px; }
+    summary { cursor:pointer; }
+    .frame-links { display:flex; gap:6px; flex-wrap:wrap; margin-top:7px; }
+    .frame-links a { min-width:24px; text-align:center; }
+    .image-error { color:#a34434; margin:8px 0 0; font-size:11px; }
+    .empty { border:1px dashed #b9c4ad; padding:34px; border-radius:14px; background:#fff; }
+    .empty h2 { margin:0 0 8px; font-size:20px; }
+    .empty p { margin:0; color:var(--muted); }
+    footer { border-top:1px solid var(--line); margin-top:40px; padding-top:20px; color:var(--muted); font-size:12px; }
+    code { font-family:ui-monospace,"SFMono-Regular",Consolas,monospace; }
+    [hidden] { display:none !important; }
+    @media (max-width:1150px) { .grid { grid-template-columns:repeat(4,minmax(0,1fr)); } #gallery.motion-comparison { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media (max-width:900px) { .grid { grid-template-columns:repeat(3,minmax(0,1fr)); } #gallery.motion-comparison { grid-template-columns:repeat(2,minmax(0,1fr)); } .headline { display:block; } .nav { margin-top:16px; } }
+    @media (max-width:620px) { main { padding:28px 16px; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } #gallery.motion-comparison { gap:10px; } .motion-comparison .character-header h2 { font-size:18px; } .motion-comparison .base-link { margin-left:0; } .toolbar { gap:12px; padding:14px; } .field { flex:1 1 calc(50% - 6px); min-width:0; } .field > span { white-space:nowrap; } .field select { width:100%; min-width:0; } .background-field { width:100%; } .card-body { padding:11px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body data-background="checker">
+<main>
+  <header class="headline">
+    <div>
+      <p class="eyebrow">YAKUMIGUMI / PIXEL ASSETS</p>
+      <h1>やくみ組 ドット素材ギャラリー</h1>
+      <p class="intro">紹介・学習動画に使えるキャラクターの動きを、並べて確認できます。背景は透過。キャラクターと動きを選んで、必要な素材を保存してください。</p>
+    </div>
+    <nav class="nav" aria-label="関連ページ">
+      <a href="../examples/pixel-player.html">1体で再生する</a>
+      <a href="../assets/pixel/manifest.json" download>メタデータ</a>
+      <a href="../ASSET-LICENSE.md">利用条件</a>
+    </nav>
+  </header>
+  <p class="note">Gitから取得した場合は、プロジェクト直下で <code>npm run pixel:build</code> を実行してからこのページを開いてください。生成済み配布パックは展開後にそのまま再生できます。<a href="PIXEL-ASSETS.md">初回生成と配布素材の使い方</a></p>
+  <div class="stats" aria-label="素材の仕様">
+    <span class="stat"><strong id="character-count">—</strong> キャラクター</span>
+    <span class="stat" id="variant-stat" hidden><strong id="variant-count">0</strong> 形状バリエーション</span>
+    <span class="stat"><strong id="motion-count">10</strong> 種類の動き</span>
+    <span class="stat" id="format-info">透過 PNG / GIF / APNG</span>
+  </div>
+  <section aria-label="絞り込みと再生">
+    <div class="toolbar">
+      <label class="field"><span>キャラクター</span><select id="character-filter"><option value="all">すべてのキャラ</option></select></label>
+      <label class="field"><span>動き</span><select id="motion-filter"><option value="all">10種類を比較</option></select></label>
+      <button id="play" class="play" type="button" disabled>一時停止</button>
+      <button id="restart" type="button" disabled>先頭に戻る</button>
+      <div class="background-field"><span class="group-label">背景</span><div class="backgrounds" role="group" aria-label="背景を変更">
+        <button type="button" data-background="checker" aria-pressed="true">透過確認</button>
+        <button type="button" data-background="white" aria-pressed="false">白</button>
+        <button type="button" data-background="dark" aria-pressed="false">暗い背景</button>
+        <button type="button" data-background="green" aria-pressed="false">緑</button>
+      </div></div>
+    </div>
+    <div class="timeline"><label for="timeline">コマ</label><input id="timeline" type="range" min="0" max="23" value="0" disabled><output id="frame-count" for="timeline">01 / 24</output></div>
+    <p class="note">PNG は全コマを収めたスプライトシートです。「個別フレーム」から1コマずつ保存できます。GIF は確認用、透過を保った動画素材には PNG / APNG が適しています。</p>
+    <p id="alpha-note" class="note" hidden>ドット絵調の原画の輪郭には半透明部分があります。背景を切り替えて見え方をご確認ください。</p>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+  <div id="gallery"></div>
+  <noscript><p class="empty">再生には JavaScript を有効にしてください。素材は <a href="../assets/pixel/">assets/pixel/</a> にあります。</p></noscript>
+  <footer>このページはフォルダー内のファイルだけを読み込みます。初回生成後、または生成済み配布パックを展開後に、この HTML を直接開いて使えます。<br>キャラクター素材：やくみ組。<a href="../LICENSE">MIT License</a> と <a href="../ASSET-LICENSE.md">素材の利用条件</a> をご確認ください。</footer>
+</main>
+<script src="../assets/pixel/manifest.js"></script>
+<script>
+'use strict';
+(() => {
+  const manifest = globalThis.YAKUMIGUMI_PIXEL_MANIFEST;
+  const gallery = document.getElementById('gallery');
+  const status = document.getElementById('status');
+  const characterFilter = document.getElementById('character-filter');
+  const motionFilter = document.getElementById('motion-filter');
+  const playButton = document.getElementById('play');
+  const restartButton = document.getElementById('restart');
+  const timeline = document.getElementById('timeline');
+  const frameOutput = document.getElementById('frame-count');
+  const assetRoot = new URL('../assets/pixel/', location.href);
+  const motionOrder = ['idle', 'blink', 'walk', 'cheer', 'surprise', 'worry', 'think', 'talk', 'point', 'bow'];
+  const motionLabels = { idle:'待機', blink:'まばたき', walk:'歩行・移動', cheer:'喜ぶ', surprise:'驚く', worry:'困る', think:'考える', talk:'話す', point:'指さす・説明', bow:'おじぎ' };
+  const cards = [];
+  let playing = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let elapsed = 0;
+  let lastTime = null;
+  let lastFrame = -1;
+  let request = 0;
+  function element(tag, className, content) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (content !== undefined) node.textContent = content;
+    return node;
+  }
+  function assetUrl(relative) {
+    if (typeof relative !== 'string' || !relative || relative.startsWith('/') || relative.includes('\\') || /(^|\/)\.\.?(\/|$)/.test(relative) || /^[a-z]+:/i.test(relative)) return null;
+    const url = new URL(relative, assetRoot);
+    return url.href.startsWith(assetRoot.href) ? url.href : null;
+  }
+  function link(relative, label, fileName) {
+    const href = assetUrl(relative);
+    if (!href) return null;
+    const a = element('a', '', label);
+    a.href = href;
+    a.download = fileName || relative.split('/').pop();
+    return a;
+  }
+  function empty(title, message) {
+    const box = element('div', 'empty');
+    box.append(element('h2', '', title), element('p', '', message));
+    gallery.replaceChildren(box);
+  }
+  if (!manifest || manifest.schemaVersion !== 1 || !manifest.characters || !manifest.motions) {
+    status.textContent = '素材データを読み込めませんでした。';
+    empty('素材を初回生成してください', 'Gitから取得した場合は npm run pixel:build を実行してください。生成済みパックの場合は assets/pixel/manifest.js と画像を含むフォルダー全体を展開してください。');
+    return;
+  }
+  const size = Number(manifest.size);
+  const fps = Number(manifest.fps);
+  const frames = Number(manifest.frames);
+  const columns = Number(manifest.columns);
+  const rows = Number(manifest.rows);
+  if (![size, fps, frames, columns, rows].every(value => Number.isInteger(value) && value > 0) || frames > columns * rows) {
+    status.textContent = 'スプライトの仕様を読み込めませんでした。';
+    empty('メタデータの仕様を確認してください', 'コマサイズ・FPS・コマ数・シートの列数と行数には、正の整数が必要です。');
+    return;
+  }
+  const duration = frames / fps;
+  const motions = [...motionOrder.filter(id => manifest.motions[id]), ...Object.keys(manifest.motions).filter(id => !motionOrder.includes(id))];
+  const characters = Object.entries(manifest.characters);
+  const variants = Object.entries(manifest.variants || {}).filter(([, variant]) => typeof variant.parent === 'string' && manifest.characters[variant.parent]);
+  const sprites = [...characters.map(([id, character]) => ({ id, character, variant:false })), ...variants.map(([id, character]) => ({ id, character, variant:true }))];
+  document.getElementById('alpha-note').hidden = !sprites.some(({ character }) => character.source?.pixelStyle?.includes('partial alpha'));
+  const labelFor = id => manifest.motions[id]?.label || motionLabels[id] || id;
+  document.getElementById('character-count').textContent = String(characters.length);
+  document.getElementById('variant-count').textContent = String(variants.length);
+  document.getElementById('variant-stat').hidden = !variants.length;
+  document.getElementById('motion-count').textContent = String(motions.length);
+  document.getElementById('format-info').textContent = `${size} × ${size} / ${fps} fps / ${duration} 秒ループ`;
+  timeline.max = String(frames - 1);
+  motionFilter.options[0].textContent = `${motions.length}種類を比較`;
+  for (const id of motions) motionFilter.append(new Option(labelFor(id), id));
+  const primaryOptions = document.createElement('optgroup');
+  primaryOptions.label = `キャラクター (${characters.length})`;
+  const variantOptions = document.createElement('optgroup');
+  variantOptions.label = `形状バリエーション (${variants.length})`;
+  characterFilter.append(primaryOptions);
+  if (variants.length) characterFilter.append(variantOptions);
+  let variantHeading = null;
+  for (const { id:characterId, character, variant } of sprites) {
+    (variant ? variantOptions : primaryOptions).append(new Option(character.name || characterId, characterId));
+    if (variant && !variantHeading) {
+      variantHeading = element('div', 'variant-heading');
+      variantHeading.append(element('h2', '', '形状バリエーション'), element('p', '', '同じキャラクターの別の形状です。各形状にも10種類の動きを用意しています。'));
+      gallery.append(variantHeading);
+    }
+    const section = element('section', 'character');
+    section.dataset.character = characterId;
+    if (variant) section.dataset.variant = characterId;
+    const header = element('div', 'character-header');
+    header.append(element('h2', '', character.name || characterId), element('span', 'character-id', characterId));
+    if (variant) header.append(element('span', 'variant-badge', `${manifest.characters[character.parent].name || character.parent}の別形状`));
+    const baseLink = link(character.base, '静止画 PNG', `${characterId}-base.png`);
+    if (baseLink) { baseLink.className = 'base-link'; header.append(baseLink); }
+    if (character.anatomy) header.append(element('p', '', character.anatomy));
+    const grid = element('div', 'grid');
+    section.append(header, grid);
+    for (const motionId of motions) {
+      const animation = character.animations?.[motionId];
+      if (!animation) continue;
+      const sheet = assetUrl(animation.sheet);
+      if (!sheet) continue;
+      const card = element('article', 'card');
+      card.dataset.motion = motionId;
+      const stage = element('div', 'stage');
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      canvas.setAttribute('role', 'img');
+      canvas.setAttribute('aria-label', `${character.name || characterId}：${labelFor(motionId)}`);
+      stage.append(canvas);
+      const body = element('div', 'card-body');
+      body.append(element('h3', '', labelFor(motionId)), element('p', 'motion-id', motionId));
+      const downloads = element('div', 'downloads');
+      for (const [format, path] of [['PNG', animation.sheet], ['GIF', animation.gif], ['APNG', animation.apng]]) {
+        const download = link(path, format, `${characterId}-${motionId}.${format === 'PNG' ? 'png' : format.toLowerCase()}`);
+        if (download) { download.setAttribute('aria-label', `${character.name || characterId} ${labelFor(motionId)} ${format}を保存`); downloads.append(download); }
+      }
+      body.append(downloads);
+      if (Array.isArray(animation.frames) && animation.frames.length) {
+        const details = document.createElement('details');
+        details.append(element('summary', '', `個別フレーム (${animation.frames.length})`));
+        const frameLinks = element('div', 'frame-links');
+        animation.frames.forEach((path, index) => {
+          const download = link(path, String(index + 1).padStart(2, '0'), `${characterId}-${motionId}-${String(index).padStart(3, '0')}.png`);
+          if (download) { download.setAttribute('aria-label', `${character.name || characterId} ${labelFor(motionId)} ${index + 1}コマ目を保存`); frameLinks.append(download); }
+        });
+        details.append(frameLinks);
+        body.append(details);
+      }
+      card.append(stage, body);
+      grid.append(card);
+      const img = new Image();
+      const record = { card, section, canvas, ctx:canvas.getContext('2d'), img, sheet, loaded:false, visible:true, pending:false };
+      record.ctx.imageSmoothingEnabled = false;
+      img.onload = () => {
+        record.loaded = img.naturalWidth === size * columns && img.naturalHeight === size * rows;
+        if (!record.loaded) body.append(element('p', 'image-error', 'シートの大きさがメタデータと一致しません。'));
+        else draw(record, frameAt());
+      };
+      img.onerror = () => body.append(element('p', 'image-error', '画像が見つかりません。Gitから取得した場合は npm run pixel:build で生成してください。'));
+      cards.push(record);
+    }
+    gallery.append(section);
+  }
+  function frameAt() { return Math.floor(elapsed * fps) % frames; }
+  function draw(record, frame) {
+    if (!record.loaded || !record.visible || record.card.hidden || record.section.hidden) return;
+    record.ctx.clearRect(0, 0, size, size);
+    record.ctx.drawImage(record.img, (frame % columns) * size, Math.floor(frame / columns) * size, size, size, 0, 0, size, size);
+  }
+  function render(force = false) {
+    const frame = frameAt();
+    if (!force && frame === lastFrame) return;
+    cards.forEach(record => draw(record, frame));
+    timeline.value = String(frame);
+    frameOutput.value = `${String(frame + 1).padStart(2, '0')} / ${frames}`;
+    lastFrame = frame;
+  }
+  function startImage(record) { if (!record.pending) { record.pending = true; record.img.src = record.sheet; } }
+  if ('IntersectionObserver' in globalThis) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        const record = cards.find(item => item.canvas === entry.target);
+        if (!record) continue;
+        record.visible = entry.isIntersecting;
+        if (record.visible) { startImage(record); draw(record, frameAt()); }
+      }
+    }, { rootMargin:'160px' });
+    cards.forEach(record => observer.observe(record.canvas));
+  } else cards.forEach(startImage);
+  function updateFilters() {
+    let shown = 0;
+    gallery.classList.toggle('motion-comparison', motionFilter.value !== 'all' && characterFilter.value === 'all');
+    for (const section of gallery.querySelectorAll('.character')) {
+      section.hidden = characterFilter.value !== 'all' && section.dataset.character !== characterFilter.value;
+      for (const card of section.querySelectorAll('.card')) {
+        card.hidden = motionFilter.value !== 'all' && card.dataset.motion !== motionFilter.value;
+        if (!section.hidden && !card.hidden) shown++;
+      }
+      if (!section.hidden && ![...section.querySelectorAll('.card')].some(card => !card.hidden)) section.hidden = true;
+    }
+    if (variantHeading) variantHeading.hidden = ![...gallery.querySelectorAll('.character[data-variant]')].some(section => !section.hidden);
+    status.textContent = `${shown} 種類のアニメーションを表示中`;
+    render(true);
+  }
+  function updatePlay() { playButton.textContent = playing ? '一時停止' : 'すべて再生'; playButton.setAttribute('aria-label', playing ? 'すべての動きを一時停止' : 'すべての動きを再生'); }
+  function tick(time) {
+    if (playing && !document.hidden && lastTime !== null) elapsed = (elapsed + Math.min((time - lastTime) / 1000, .25)) % duration;
+    lastTime = time;
+    render();
+    request = requestAnimationFrame(tick);
+  }
+  characterFilter.addEventListener('change', updateFilters);
+  motionFilter.addEventListener('change', updateFilters);
+  playButton.addEventListener('click', () => { playing = !playing; lastTime = null; updatePlay(); });
+  restartButton.addEventListener('click', () => { elapsed = 0; lastTime = null; render(true); });
+  timeline.addEventListener('input', () => { playing = false; elapsed = Number(timeline.value) / fps; lastTime = null; updatePlay(); render(true); });
+  document.querySelectorAll('button[data-background]').forEach(button => button.addEventListener('click', () => {
+    document.body.dataset.background = button.dataset.background;
+    document.querySelectorAll('button[data-background]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  }));
+  document.addEventListener('visibilitychange', () => { lastTime = null; });
+  globalThis.addEventListener('pagehide', () => cancelAnimationFrame(request));
+  [playButton, restartButton, timeline].forEach(control => { control.disabled = cards.length === 0; });
+  if (!cards.length) empty('アニメーションは準備中です', 'メタデータに利用可能なスプライトシートがありません。');
+  updatePlay();
+  updateFilters();
+  render(true);
+  if (cards.length) request = requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

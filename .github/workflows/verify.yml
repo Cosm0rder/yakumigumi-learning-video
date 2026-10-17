@@ -1,0 +1,32 @@
+name: Verify local video kit
+
+on:
+  push:
+    branches: [main, 'assets/**']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install local rendering tools
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+          npm ci --ignore-scripts --no-audit --no-fund
+      - name: Generate all pixel motions
+        run: npm run pixel:build
+      - run: npm test
+      - run: npm run audit
+      - run: npm run smoke

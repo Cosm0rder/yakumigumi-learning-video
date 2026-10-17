@@ -1,6 +1,6 @@
 # やくみ組素材 — MIT License
 
-対象は `assets/characters-key.png`、`assets/v2/motion.png`、`assets/animations/` と、それらを使用した `docs/` の見本画像・GIFです。フォントには適用しません。
+対象は `assets/characters-key.png`、`assets/v2/motion.png`、`assets/animations/`、`assets/pixel/` と、それらを使用した `docs/` の見本画像・GIFです。フォントには適用しません。
 
 これらの素材も、コードと同じ **[MIT License](LICENSE)** で公開します。著作権表示は `Copyright (c) 2026 Cosm0rder` です。
 

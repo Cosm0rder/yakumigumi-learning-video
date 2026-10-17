@@ -1,0 +1,2758 @@
+{
+  "schemaVersion": 1,
+  "characters": {
+    "chili": {
+      "sheet": "masters/keyposes-seven/chili_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            111,
+            17,
+            271,
+            383
+          ],
+          "tight": [
+            114,
+            20,
+            268,
+            380
+          ]
+        },
+        "blink": {
+          "padded": [
+            482,
+            17,
+            643,
+            383
+          ],
+          "tight": [
+            485,
+            20,
+            640,
+            380
+          ]
+        },
+        "walk": {
+          "padded": [
+            886,
+            29,
+            1050,
+            369
+          ],
+          "tight": [
+            889,
+            32,
+            1047,
+            366
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1269,
+            17,
+            1431,
+            383
+          ],
+          "tight": [
+            1272,
+            20,
+            1428,
+            380
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1679,
+            17,
+            1842,
+            383
+          ],
+          "tight": [
+            1682,
+            20,
+            1839,
+            380
+          ]
+        },
+        "worry": {
+          "padded": [
+            106,
+            411,
+            288,
+            767
+          ],
+          "tight": [
+            109,
+            414,
+            285,
+            764
+          ]
+        },
+        "think": {
+          "padded": [
+            483,
+            402,
+            678,
+            766
+          ],
+          "tight": [
+            486,
+            405,
+            675,
+            763
+          ]
+        },
+        "talk": {
+          "padded": [
+            877,
+            409,
+            1058,
+            766
+          ],
+          "tight": [
+            880,
+            412,
+            1055,
+            763
+          ]
+        },
+        "point": {
+          "padded": [
+            1269,
+            418,
+            1488,
+            766
+          ],
+          "tight": [
+            1272,
+            421,
+            1485,
+            763
+          ]
+        },
+        "bow": {
+          "padded": [
+            1685,
+            462,
+            1900,
+            767
+          ],
+          "tight": [
+            1688,
+            465,
+            1897,
+            764
+          ]
+        }
+      }
+    },
+    "daikon": {
+      "sheet": "masters/keyposes-seven/daikon_keyposes_v02.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            95,
+            28,
+            317,
+            373
+          ],
+          "tight": [
+            98,
+            31,
+            314,
+            370
+          ]
+        },
+        "blink": {
+          "padded": [
+            457,
+            28,
+            678,
+            373
+          ],
+          "tight": [
+            460,
+            31,
+            675,
+            370
+          ]
+        },
+        "walk": {
+          "padded": [
+            842,
+            96,
+            1103,
+            377
+          ],
+          "tight": [
+            845,
+            99,
+            1100,
+            374
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1263,
+            27,
+            1485,
+            373
+          ],
+          "tight": [
+            1266,
+            30,
+            1482,
+            370
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1667,
+            27,
+            1888,
+            373
+          ],
+          "tight": [
+            1670,
+            30,
+            1885,
+            370
+          ]
+        },
+        "worry": {
+          "padded": [
+            95,
+            413,
+            317,
+            756
+          ],
+          "tight": [
+            98,
+            416,
+            314,
+            753
+          ]
+        },
+        "think": {
+          "padded": [
+            464,
+            410,
+            702,
+            756
+          ],
+          "tight": [
+            467,
+            413,
+            699,
+            753
+          ]
+        },
+        "talk": {
+          "padded": [
+            872,
+            413,
+            1096,
+            756
+          ],
+          "tight": [
+            875,
+            416,
+            1093,
+            753
+          ]
+        },
+        "point": {
+          "padded": [
+            1232,
+            424,
+            1502,
+            757
+          ],
+          "tight": [
+            1235,
+            427,
+            1499,
+            754
+          ]
+        },
+        "bow": {
+          "padded": [
+            1650,
+            463,
+            1941,
+            768
+          ],
+          "tight": [
+            1653,
+            466,
+            1938,
+            765
+          ]
+        }
+      }
+    },
+    "garlic": {
+      "sheet": "masters/keyposes-seven/garlic_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            33,
+            78,
+            391,
+            377
+          ],
+          "tight": [
+            36,
+            81,
+            388,
+            374
+          ]
+        },
+        "blink": {
+          "padded": [
+            430,
+            78,
+            785,
+            377
+          ],
+          "tight": [
+            433,
+            81,
+            782,
+            374
+          ]
+        },
+        "walk": {
+          "padded": [
+            814,
+            66,
+            1183,
+            391
+          ],
+          "tight": [
+            817,
+            69,
+            1180,
+            388
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1203,
+            78,
+            1566,
+            377
+          ],
+          "tight": [
+            1206,
+            81,
+            1563,
+            374
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1593,
+            78,
+            1950,
+            377
+          ],
+          "tight": [
+            1596,
+            81,
+            1947,
+            374
+          ]
+        },
+        "worry": {
+          "padded": [
+            32,
+            428,
+            391,
+            730
+          ],
+          "tight": [
+            35,
+            431,
+            388,
+            727
+          ]
+        },
+        "think": {
+          "padded": [
+            416,
+            428,
+            775,
+            730
+          ],
+          "tight": [
+            419,
+            431,
+            772,
+            727
+          ]
+        },
+        "talk": {
+          "padded": [
+            795,
+            428,
+            1164,
+            730
+          ],
+          "tight": [
+            798,
+            431,
+            1161,
+            727
+          ]
+        },
+        "point": {
+          "padded": [
+            1190,
+            432,
+            1562,
+            744
+          ],
+          "tight": [
+            1193,
+            435,
+            1559,
+            741
+          ]
+        },
+        "bow": {
+          "padded": [
+            1593,
+            489,
+            1951,
+            744
+          ],
+          "tight": [
+            1596,
+            492,
+            1948,
+            741
+          ]
+        }
+      }
+    },
+    "grater": {
+      "sheet": "masters/keyposes-seven/grater_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            21,
+            159,
+            404,
+            345
+          ],
+          "tight": [
+            24,
+            162,
+            401,
+            342
+          ]
+        },
+        "blink": {
+          "padded": [
+            409,
+            159,
+            793,
+            345
+          ],
+          "tight": [
+            412,
+            162,
+            790,
+            342
+          ]
+        },
+        "walk": {
+          "padded": [
+            791,
+            131,
+            1185,
+            350
+          ],
+          "tight": [
+            794,
+            134,
+            1182,
+            347
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1187,
+            159,
+            1576,
+            345
+          ],
+          "tight": [
+            1190,
+            162,
+            1573,
+            342
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1579,
+            159,
+            1962,
+            345
+          ],
+          "tight": [
+            1582,
+            162,
+            1959,
+            342
+          ]
+        },
+        "worry": {
+          "padded": [
+            21,
+            495,
+            404,
+            682
+          ],
+          "tight": [
+            24,
+            498,
+            401,
+            679
+          ]
+        },
+        "think": {
+          "padded": [
+            409,
+            494,
+            793,
+            682
+          ],
+          "tight": [
+            412,
+            497,
+            790,
+            679
+          ]
+        },
+        "talk": {
+          "padded": [
+            802,
+            494,
+            1184,
+            682
+          ],
+          "tight": [
+            805,
+            497,
+            1181,
+            679
+          ]
+        },
+        "point": {
+          "padded": [
+            1181,
+            459,
+            1574,
+            690
+          ],
+          "tight": [
+            1184,
+            462,
+            1571,
+            687
+          ]
+        },
+        "bow": {
+          "padded": [
+            1579,
+            490,
+            1960,
+            693
+          ],
+          "tight": [
+            1582,
+            493,
+            1957,
+            690
+          ]
+        }
+      }
+    },
+    "tube": {
+      "sheet": "masters/keyposes-seven/mustard_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            139,
+            34,
+            349,
+            370
+          ],
+          "tight": [
+            142,
+            37,
+            346,
+            367
+          ]
+        },
+        "blink": {
+          "padded": [
+            502,
+            34,
+            712,
+            370
+          ],
+          "tight": [
+            505,
+            37,
+            709,
+            367
+          ]
+        },
+        "walk": {
+          "padded": [
+            863,
+            78,
+            1090,
+            370
+          ],
+          "tight": [
+            866,
+            81,
+            1087,
+            367
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1236,
+            34,
+            1446,
+            370
+          ],
+          "tight": [
+            1239,
+            37,
+            1443,
+            367
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1604,
+            34,
+            1815,
+            370
+          ],
+          "tight": [
+            1607,
+            37,
+            1812,
+            367
+          ]
+        },
+        "worry": {
+          "padded": [
+            139,
+            401,
+            349,
+            739
+          ],
+          "tight": [
+            142,
+            404,
+            346,
+            736
+          ]
+        },
+        "think": {
+          "padded": [
+            501,
+            404,
+            713,
+            739
+          ],
+          "tight": [
+            504,
+            407,
+            710,
+            736
+          ]
+        },
+        "talk": {
+          "padded": [
+            870,
+            399,
+            1085,
+            739
+          ],
+          "tight": [
+            873,
+            402,
+            1082,
+            736
+          ]
+        },
+        "point": {
+          "padded": [
+            1246,
+            396,
+            1475,
+            739
+          ],
+          "tight": [
+            1249,
+            399,
+            1472,
+            736
+          ]
+        },
+        "bow": {
+          "padded": [
+            1592,
+            424,
+            1848,
+            739
+          ],
+          "tight": [
+            1595,
+            427,
+            1845,
+            736
+          ]
+        }
+      }
+    },
+    "myoga": {
+      "sheet": "masters/keyposes-lead/myoga_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            60,
+            44,
+            287,
+            506
+          ],
+          "tight": [
+            63,
+            47,
+            284,
+            503
+          ]
+        },
+        "blink": {
+          "padded": [
+            353,
+            45,
+            577,
+            506
+          ],
+          "tight": [
+            356,
+            48,
+            574,
+            503
+          ]
+        },
+        "walk": {
+          "padded": [
+            620,
+            110,
+            915,
+            506
+          ],
+          "tight": [
+            623,
+            113,
+            912,
+            503
+          ]
+        },
+        "cheer": {
+          "padded": [
+            954,
+            44,
+            1184,
+            506
+          ],
+          "tight": [
+            957,
+            47,
+            1181,
+            503
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1251,
+            44,
+            1479,
+            506
+          ],
+          "tight": [
+            1254,
+            47,
+            1476,
+            503
+          ]
+        },
+        "worry": {
+          "padded": [
+            54,
+            525,
+            289,
+            977
+          ],
+          "tight": [
+            57,
+            528,
+            286,
+            974
+          ]
+        },
+        "think": {
+          "padded": [
+            364,
+            545,
+            592,
+            977
+          ],
+          "tight": [
+            367,
+            548,
+            589,
+            974
+          ]
+        },
+        "talk": {
+          "padded": [
+            640,
+            525,
+            870,
+            977
+          ],
+          "tight": [
+            643,
+            528,
+            867,
+            974
+          ]
+        },
+        "point": {
+          "padded": [
+            950,
+            553,
+            1210,
+            977
+          ],
+          "tight": [
+            953,
+            556,
+            1207,
+            974
+          ]
+        },
+        "bow": {
+          "padded": [
+            1239,
+            631,
+            1510,
+            977
+          ],
+          "tight": [
+            1242,
+            634,
+            1507,
+            974
+          ]
+        }
+      }
+    },
+    "negi": {
+      "sheet": "masters/keyposes-seven/negi_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            151,
+            13,
+            343,
+            393
+          ],
+          "tight": [
+            154,
+            16,
+            340,
+            390
+          ]
+        },
+        "blink": {
+          "padded": [
+            542,
+            13,
+            734,
+            393
+          ],
+          "tight": [
+            545,
+            16,
+            731,
+            390
+          ]
+        },
+        "walk": {
+          "padded": [
+            904,
+            24,
+            1114,
+            392
+          ],
+          "tight": [
+            907,
+            27,
+            1111,
+            389
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1253,
+            13,
+            1452,
+            392
+          ],
+          "tight": [
+            1256,
+            16,
+            1449,
+            389
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1641,
+            12,
+            1836,
+            392
+          ],
+          "tight": [
+            1644,
+            15,
+            1833,
+            389
+          ]
+        },
+        "worry": {
+          "padded": [
+            150,
+            404,
+            352,
+            781
+          ],
+          "tight": [
+            153,
+            407,
+            349,
+            778
+          ]
+        },
+        "think": {
+          "padded": [
+            488,
+            409,
+            729,
+            781
+          ],
+          "tight": [
+            491,
+            412,
+            726,
+            778
+          ]
+        },
+        "talk": {
+          "padded": [
+            905,
+            404,
+            1107,
+            781
+          ],
+          "tight": [
+            908,
+            407,
+            1104,
+            778
+          ]
+        },
+        "point": {
+          "padded": [
+            1239,
+            404,
+            1502,
+            781
+          ],
+          "tight": [
+            1242,
+            407,
+            1499,
+            778
+          ]
+        },
+        "bow": {
+          "padded": [
+            1616,
+            480,
+            1875,
+            781
+          ],
+          "tight": [
+            1619,
+            483,
+            1872,
+            778
+          ]
+        }
+      }
+    },
+    "oba": {
+      "sheet": "masters/keyposes-lead/oba_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            60,
+            14,
+            400,
+            394
+          ],
+          "tight": [
+            63,
+            17,
+            397,
+            391
+          ]
+        },
+        "blink": {
+          "padded": [
+            469,
+            14,
+            805,
+            394
+          ],
+          "tight": [
+            472,
+            17,
+            802,
+            391
+          ]
+        },
+        "walk": {
+          "padded": [
+            878,
+            47,
+            1197,
+            394
+          ],
+          "tight": [
+            881,
+            50,
+            1194,
+            391
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1236,
+            14,
+            1563,
+            394
+          ],
+          "tight": [
+            1239,
+            17,
+            1560,
+            391
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1601,
+            14,
+            1927,
+            394
+          ],
+          "tight": [
+            1604,
+            17,
+            1924,
+            391
+          ]
+        },
+        "worry": {
+          "padded": [
+            50,
+            402,
+            391,
+            777
+          ],
+          "tight": [
+            53,
+            405,
+            388,
+            774
+          ]
+        },
+        "think": {
+          "padded": [
+            450,
+            402,
+            785,
+            777
+          ],
+          "tight": [
+            453,
+            405,
+            782,
+            774
+          ]
+        },
+        "talk": {
+          "padded": [
+            826,
+            402,
+            1156,
+            777
+          ],
+          "tight": [
+            829,
+            405,
+            1153,
+            774
+          ]
+        },
+        "point": {
+          "padded": [
+            1250,
+            415,
+            1568,
+            777
+          ],
+          "tight": [
+            1253,
+            418,
+            1565,
+            774
+          ]
+        },
+        "bow": {
+          "padded": [
+            1617,
+            439,
+            1933,
+            770
+          ],
+          "tight": [
+            1620,
+            442,
+            1930,
+            767
+          ]
+        }
+      }
+    },
+    "okra": {
+      "sheet": "masters/keyposes-lead/okra_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            23,
+            105,
+            398,
+            324
+          ],
+          "tight": [
+            26,
+            108,
+            395,
+            321
+          ]
+        },
+        "blink": {
+          "padded": [
+            416,
+            106,
+            793,
+            324
+          ],
+          "tight": [
+            419,
+            109,
+            790,
+            321
+          ]
+        },
+        "walk": {
+          "padded": [
+            809,
+            79,
+            1171,
+            326
+          ],
+          "tight": [
+            812,
+            82,
+            1168,
+            323
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1189,
+            108,
+            1575,
+            323
+          ],
+          "tight": [
+            1192,
+            111,
+            1572,
+            320
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1592,
+            107,
+            1965,
+            323
+          ],
+          "tight": [
+            1595,
+            110,
+            1962,
+            320
+          ]
+        },
+        "worry": {
+          "padded": [
+            22,
+            477,
+            398,
+            696
+          ],
+          "tight": [
+            25,
+            480,
+            395,
+            693
+          ]
+        },
+        "think": {
+          "padded": [
+            418,
+            482,
+            791,
+            698
+          ],
+          "tight": [
+            421,
+            485,
+            788,
+            695
+          ]
+        },
+        "talk": {
+          "padded": [
+            806,
+            483,
+            1186,
+            698
+          ],
+          "tight": [
+            809,
+            486,
+            1183,
+            695
+          ]
+        },
+        "point": {
+          "padded": [
+            1199,
+            469,
+            1575,
+            669
+          ],
+          "tight": [
+            1202,
+            472,
+            1572,
+            666
+          ]
+        },
+        "bow": {
+          "padded": [
+            1599,
+            442,
+            1965,
+            717
+          ],
+          "tight": [
+            1602,
+            445,
+            1962,
+            714
+          ]
+        }
+      }
+    },
+    "whale": {
+      "sheet": "masters/keyposes-lead/sansho_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            15,
+            147,
+            391,
+            349
+          ],
+          "tight": [
+            18,
+            150,
+            388,
+            346
+          ]
+        },
+        "blink": {
+          "padded": [
+            423,
+            147,
+            796,
+            348
+          ],
+          "tight": [
+            426,
+            150,
+            793,
+            345
+          ]
+        },
+        "walk": {
+          "padded": [
+            824,
+            108,
+            1171,
+            360
+          ],
+          "tight": [
+            827,
+            111,
+            1168,
+            357
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1198,
+            143,
+            1570,
+            353
+          ],
+          "tight": [
+            1201,
+            146,
+            1567,
+            350
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1590,
+            147,
+            1964,
+            349
+          ],
+          "tight": [
+            1593,
+            150,
+            1961,
+            346
+          ]
+        },
+        "worry": {
+          "padded": [
+            21,
+            496,
+            396,
+            703
+          ],
+          "tight": [
+            24,
+            499,
+            393,
+            700
+          ]
+        },
+        "think": {
+          "padded": [
+            417,
+            485,
+            783,
+            703
+          ],
+          "tight": [
+            420,
+            488,
+            780,
+            700
+          ]
+        },
+        "talk": {
+          "padded": [
+            819,
+            486,
+            1187,
+            703
+          ],
+          "tight": [
+            822,
+            489,
+            1184,
+            700
+          ]
+        },
+        "point": {
+          "padded": [
+            1204,
+            475,
+            1596,
+            703
+          ],
+          "tight": [
+            1207,
+            478,
+            1593,
+            700
+          ]
+        },
+        "bow": {
+          "padded": [
+            1599,
+            515,
+            1958,
+            703
+          ],
+          "tight": [
+            1602,
+            518,
+            1955,
+            700
+          ]
+        }
+      }
+    },
+    "shiso": {
+      "sheet": "masters/keyposes-lead/shiso_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            43,
+            13,
+            364,
+            396
+          ],
+          "tight": [
+            46,
+            16,
+            361,
+            393
+          ]
+        },
+        "blink": {
+          "padded": [
+            427,
+            13,
+            755,
+            396
+          ],
+          "tight": [
+            430,
+            16,
+            752,
+            393
+          ]
+        },
+        "walk": {
+          "padded": [
+            816,
+            22,
+            1163,
+            396
+          ],
+          "tight": [
+            819,
+            25,
+            1160,
+            393
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1225,
+            13,
+            1556,
+            397
+          ],
+          "tight": [
+            1228,
+            16,
+            1553,
+            394
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1617,
+            13,
+            1945,
+            396
+          ],
+          "tight": [
+            1620,
+            16,
+            1942,
+            393
+          ]
+        },
+        "worry": {
+          "padded": [
+            42,
+            398,
+            365,
+            776
+          ],
+          "tight": [
+            45,
+            401,
+            362,
+            773
+          ]
+        },
+        "think": {
+          "padded": [
+            429,
+            398,
+            759,
+            776
+          ],
+          "tight": [
+            432,
+            401,
+            756,
+            773
+          ]
+        },
+        "talk": {
+          "padded": [
+            828,
+            398,
+            1157,
+            776
+          ],
+          "tight": [
+            831,
+            401,
+            1154,
+            773
+          ]
+        },
+        "point": {
+          "padded": [
+            1248,
+            398,
+            1565,
+            776
+          ],
+          "tight": [
+            1251,
+            401,
+            1562,
+            773
+          ]
+        },
+        "bow": {
+          "padded": [
+            1616,
+            451,
+            1943,
+            776
+          ],
+          "tight": [
+            1619,
+            454,
+            1940,
+            773
+          ]
+        }
+      }
+    },
+    "shoga": {
+      "sheet": "masters/keyposes-lead/shoga_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            56,
+            28,
+            384,
+            382
+          ],
+          "tight": [
+            59,
+            31,
+            381,
+            379
+          ]
+        },
+        "blink": {
+          "padded": [
+            448,
+            27,
+            764,
+            382
+          ],
+          "tight": [
+            451,
+            30,
+            761,
+            379
+          ]
+        },
+        "walk": {
+          "padded": [
+            830,
+            28,
+            1144,
+            382
+          ],
+          "tight": [
+            833,
+            31,
+            1141,
+            379
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1204,
+            28,
+            1531,
+            382
+          ],
+          "tight": [
+            1207,
+            31,
+            1528,
+            379
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1589,
+            28,
+            1943,
+            382
+          ],
+          "tight": [
+            1592,
+            31,
+            1940,
+            379
+          ]
+        },
+        "worry": {
+          "padded": [
+            95,
+            414,
+            349,
+            769
+          ],
+          "tight": [
+            98,
+            417,
+            346,
+            766
+          ]
+        },
+        "think": {
+          "padded": [
+            485,
+            414,
+            752,
+            769
+          ],
+          "tight": [
+            488,
+            417,
+            749,
+            766
+          ]
+        },
+        "talk": {
+          "padded": [
+            834,
+            415,
+            1155,
+            769
+          ],
+          "tight": [
+            837,
+            418,
+            1152,
+            766
+          ]
+        },
+        "point": {
+          "padded": [
+            1222,
+            414,
+            1571,
+            769
+          ],
+          "tight": [
+            1225,
+            417,
+            1568,
+            766
+          ]
+        },
+        "bow": {
+          "padded": [
+            1644,
+            446,
+            1901,
+            767
+          ],
+          "tight": [
+            1647,
+            449,
+            1898,
+            764
+          ]
+        }
+      }
+    },
+    "sudachi": {
+      "sheet": "masters/keyposes-lead/sudachi_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            34,
+            63,
+            369,
+            377
+          ],
+          "tight": [
+            37,
+            66,
+            366,
+            374
+          ]
+        },
+        "blink": {
+          "padded": [
+            429,
+            63,
+            765,
+            377
+          ],
+          "tight": [
+            432,
+            66,
+            762,
+            374
+          ]
+        },
+        "walk": {
+          "padded": [
+            794,
+            75,
+            1191,
+            380
+          ],
+          "tight": [
+            797,
+            78,
+            1188,
+            377
+          ],
+          "bodyTight": [
+            826,
+            78,
+            1156,
+            377
+          ],
+          "cropAdjustment": "Extend component bounds to retain detached supplied motion strokes; original exact-bounds JSON and source PNG unchanged; anchor follows body bounds."
+        },
+        "cheer": {
+          "padded": [
+            1219,
+            63,
+            1554,
+            377
+          ],
+          "tight": [
+            1222,
+            66,
+            1551,
+            374
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1613,
+            63,
+            1947,
+            377
+          ],
+          "tight": [
+            1616,
+            66,
+            1944,
+            374
+          ]
+        },
+        "worry": {
+          "padded": [
+            34,
+            426,
+            369,
+            744
+          ],
+          "tight": [
+            37,
+            429,
+            366,
+            741
+          ]
+        },
+        "think": {
+          "padded": [
+            431,
+            425,
+            771,
+            744
+          ],
+          "tight": [
+            434,
+            428,
+            768,
+            741
+          ]
+        },
+        "talk": {
+          "padded": [
+            823,
+            426,
+            1159,
+            744
+          ],
+          "tight": [
+            826,
+            429,
+            1156,
+            741
+          ]
+        },
+        "point": {
+          "padded": [
+            1204,
+            431,
+            1596,
+            744
+          ],
+          "tight": [
+            1207,
+            434,
+            1593,
+            741
+          ],
+          "bodyTight": [
+            1207,
+            434,
+            1541,
+            741
+          ],
+          "cropAdjustment": "Extend component bounds to retain detached supplied motion strokes; original exact-bounds JSON and source PNG unchanged; anchor follows body bounds."
+        },
+        "bow": {
+          "padded": [
+            1622,
+            464,
+            1948,
+            744
+          ],
+          "tight": [
+            1625,
+            467,
+            1945,
+            741
+          ]
+        }
+      }
+    },
+    "wasabi": {
+      "sheet": "masters/keyposes-seven/wasabi_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            170,
+            16,
+            340,
+            386
+          ],
+          "tight": [
+            173,
+            19,
+            337,
+            383
+          ]
+        },
+        "blink": {
+          "padded": [
+            541,
+            16,
+            715,
+            386
+          ],
+          "tight": [
+            544,
+            19,
+            712,
+            383
+          ]
+        },
+        "walk": {
+          "padded": [
+            874,
+            13,
+            1101,
+            386
+          ],
+          "tight": [
+            877,
+            16,
+            1098,
+            383
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1263,
+            15,
+            1439,
+            387
+          ],
+          "tight": [
+            1266,
+            18,
+            1436,
+            384
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1617,
+            13,
+            1792,
+            388
+          ],
+          "tight": [
+            1620,
+            16,
+            1789,
+            385
+          ]
+        },
+        "worry": {
+          "padded": [
+            166,
+            402,
+            346,
+            778
+          ],
+          "tight": [
+            169,
+            405,
+            343,
+            775
+          ]
+        },
+        "think": {
+          "padded": [
+            477,
+            402,
+            726,
+            777
+          ],
+          "tight": [
+            480,
+            405,
+            723,
+            774
+          ]
+        },
+        "talk": {
+          "padded": [
+            899,
+            402,
+            1085,
+            778
+          ],
+          "tight": [
+            902,
+            405,
+            1082,
+            775
+          ]
+        },
+        "point": {
+          "padded": [
+            1238,
+            402,
+            1506,
+            778
+          ],
+          "tight": [
+            1241,
+            405,
+            1503,
+            775
+          ]
+        },
+        "bow": {
+          "padded": [
+            1608,
+            455,
+            1900,
+            773
+          ],
+          "tight": [
+            1611,
+            458,
+            1897,
+            770
+          ]
+        }
+      }
+    },
+    "yuzu": {
+      "sheet": "masters/keyposes-lead/yuzu_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            37,
+            106,
+            375,
+            369
+          ],
+          "tight": [
+            40,
+            109,
+            372,
+            366
+          ]
+        },
+        "blink": {
+          "padded": [
+            428,
+            108,
+            769,
+            369
+          ],
+          "tight": [
+            431,
+            111,
+            766,
+            366
+          ]
+        },
+        "walk": {
+          "padded": [
+            812,
+            112,
+            1157,
+            369
+          ],
+          "tight": [
+            815,
+            115,
+            1154,
+            366
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1206,
+            104,
+            1552,
+            369
+          ],
+          "tight": [
+            1209,
+            107,
+            1549,
+            366
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1604,
+            105,
+            1941,
+            369
+          ],
+          "tight": [
+            1607,
+            108,
+            1938,
+            366
+          ]
+        },
+        "worry": {
+          "padded": [
+            37,
+            478,
+            375,
+            739
+          ],
+          "tight": [
+            40,
+            481,
+            372,
+            736
+          ]
+        },
+        "think": {
+          "padded": [
+            427,
+            474,
+            765,
+            739
+          ],
+          "tight": [
+            430,
+            477,
+            762,
+            736
+          ]
+        },
+        "talk": {
+          "padded": [
+            819,
+            477,
+            1162,
+            739
+          ],
+          "tight": [
+            822,
+            480,
+            1159,
+            736
+          ]
+        },
+        "point": {
+          "padded": [
+            1228,
+            489,
+            1559,
+            739
+          ],
+          "tight": [
+            1231,
+            492,
+            1556,
+            736
+          ]
+        },
+        "bow": {
+          "padded": [
+            1623,
+            513,
+            1941,
+            739
+          ],
+          "tight": [
+            1626,
+            516,
+            1938,
+            736
+          ]
+        }
+      }
+    }
+  },
+  "variants": {
+    "okra_slice": {
+      "sheet": "masters/keyposes-lead/okra_slice_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            27,
+            73,
+            318,
+            349
+          ],
+          "tight": [
+            30,
+            76,
+            315,
+            346
+          ]
+        },
+        "blink": {
+          "padded": [
+            446,
+            73,
+            741,
+            349
+          ],
+          "tight": [
+            449,
+            76,
+            738,
+            346
+          ]
+        },
+        "walk": {
+          "padded": [
+            857,
+            73,
+            1142,
+            363
+          ],
+          "tight": [
+            860,
+            76,
+            1139,
+            360
+          ]
+        },
+        "cheer": {
+          "padded": [
+            1238,
+            73,
+            1534,
+            349
+          ],
+          "tight": [
+            1241,
+            76,
+            1531,
+            346
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1646,
+            73,
+            1937,
+            349
+          ],
+          "tight": [
+            1649,
+            76,
+            1934,
+            346
+          ]
+        },
+        "worry": {
+          "padded": [
+            28,
+            445,
+            329,
+            723
+          ],
+          "tight": [
+            31,
+            448,
+            326,
+            720
+          ]
+        },
+        "think": {
+          "padded": [
+            446,
+            445,
+            747,
+            723
+          ],
+          "tight": [
+            449,
+            448,
+            744,
+            720
+          ]
+        },
+        "talk": {
+          "padded": [
+            842,
+            445,
+            1142,
+            724
+          ],
+          "tight": [
+            845,
+            448,
+            1139,
+            721
+          ]
+        },
+        "point": {
+          "padded": [
+            1260,
+            445,
+            1548,
+            736
+          ],
+          "tight": [
+            1263,
+            448,
+            1545,
+            733
+          ]
+        },
+        "bow": {
+          "padded": [
+            1654,
+            478,
+            1937,
+            721
+          ],
+          "tight": [
+            1657,
+            481,
+            1934,
+            718
+          ]
+        }
+      }
+    },
+    "wasabi_tube": {
+      "sheet": "masters/keyposes-lead/wasabi_tube_keyposes_v01.png",
+      "columns": 5,
+      "rows": 2,
+      "order": [
+        "idle",
+        "blink",
+        "walk",
+        "cheer",
+        "surprise",
+        "worry",
+        "think",
+        "talk",
+        "point",
+        "bow"
+      ],
+      "alphaCutoff": 128,
+      "outputDirectory": "poses/drawn-v01",
+      "cells": {
+        "idle": {
+          "padded": [
+            74,
+            44,
+            273,
+            468
+          ],
+          "tight": [
+            77,
+            47,
+            270,
+            465
+          ]
+        },
+        "blink": {
+          "padded": [
+            365,
+            43,
+            564,
+            468
+          ],
+          "tight": [
+            368,
+            46,
+            561,
+            465
+          ]
+        },
+        "walk": {
+          "padded": [
+            637,
+            37,
+            888,
+            473
+          ],
+          "tight": [
+            640,
+            40,
+            885,
+            470
+          ]
+        },
+        "cheer": {
+          "padded": [
+            965,
+            44,
+            1164,
+            469
+          ],
+          "tight": [
+            968,
+            47,
+            1161,
+            466
+          ]
+        },
+        "surprise": {
+          "padded": [
+            1274,
+            43,
+            1474,
+            468
+          ],
+          "tight": [
+            1277,
+            46,
+            1471,
+            465
+          ]
+        },
+        "worry": {
+          "padded": [
+            77,
+            526,
+            277,
+            949
+          ],
+          "tight": [
+            80,
+            529,
+            274,
+            946
+          ]
+        },
+        "think": {
+          "padded": [
+            363,
+            526,
+            563,
+            949
+          ],
+          "tight": [
+            366,
+            529,
+            560,
+            946
+          ]
+        },
+        "talk": {
+          "padded": [
+            668,
+            525,
+            870,
+            949
+          ],
+          "tight": [
+            671,
+            528,
+            867,
+            946
+          ]
+        },
+        "point": {
+          "padded": [
+            966,
+            520,
+            1225,
+            957
+          ],
+          "tight": [
+            969,
+            523,
+            1222,
+            954
+          ]
+        },
+        "bow": {
+          "padded": [
+            1273,
+            568,
+            1520,
+            956
+          ],
+          "tight": [
+            1276,
+            571,
+            1517,
+            953
+          ]
+        }
+      }
+    }
+  }
+}

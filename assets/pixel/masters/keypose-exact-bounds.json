@@ -1,0 +1,2703 @@
+{
+  "method": "Analyze alpha>=128 connected components; select ten components >1000 source pixels; order by 2 rows and x centers. This metadata corrects nominal-grid clipping. Source pixels untouched.",
+  "order": [
+    "idle",
+    "blink",
+    "walk",
+    "cheer",
+    "surprise",
+    "worry",
+    "think",
+    "talk",
+    "point",
+    "bow"
+  ],
+  "sheets": {
+    "chili_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            114,
+            20,
+            268,
+            380
+          ],
+          "padded_source_rect_xyxy": [
+            111,
+            17,
+            271,
+            383
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            485,
+            20,
+            640,
+            380
+          ],
+          "padded_source_rect_xyxy": [
+            482,
+            17,
+            643,
+            383
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            889,
+            32,
+            1047,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            886,
+            29,
+            1050,
+            369
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1272,
+            20,
+            1428,
+            380
+          ],
+          "padded_source_rect_xyxy": [
+            1269,
+            17,
+            1431,
+            383
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1682,
+            20,
+            1839,
+            380
+          ],
+          "padded_source_rect_xyxy": [
+            1679,
+            17,
+            1842,
+            383
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            109,
+            414,
+            285,
+            764
+          ],
+          "padded_source_rect_xyxy": [
+            106,
+            411,
+            288,
+            767
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            486,
+            405,
+            675,
+            763
+          ],
+          "padded_source_rect_xyxy": [
+            483,
+            402,
+            678,
+            766
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            880,
+            412,
+            1055,
+            763
+          ],
+          "padded_source_rect_xyxy": [
+            877,
+            409,
+            1058,
+            766
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1272,
+            421,
+            1485,
+            763
+          ],
+          "padded_source_rect_xyxy": [
+            1269,
+            418,
+            1488,
+            766
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1688,
+            465,
+            1897,
+            764
+          ],
+          "padded_source_rect_xyxy": [
+            1685,
+            462,
+            1900,
+            767
+          ]
+        }
+      ]
+    },
+    "daikon_keyposes_v02.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            98,
+            31,
+            314,
+            370
+          ],
+          "padded_source_rect_xyxy": [
+            95,
+            28,
+            317,
+            373
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            460,
+            31,
+            675,
+            370
+          ],
+          "padded_source_rect_xyxy": [
+            457,
+            28,
+            678,
+            373
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            845,
+            99,
+            1100,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            842,
+            96,
+            1103,
+            377
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1266,
+            30,
+            1482,
+            370
+          ],
+          "padded_source_rect_xyxy": [
+            1263,
+            27,
+            1485,
+            373
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1670,
+            30,
+            1885,
+            370
+          ],
+          "padded_source_rect_xyxy": [
+            1667,
+            27,
+            1888,
+            373
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            98,
+            416,
+            314,
+            753
+          ],
+          "padded_source_rect_xyxy": [
+            95,
+            413,
+            317,
+            756
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            467,
+            413,
+            699,
+            753
+          ],
+          "padded_source_rect_xyxy": [
+            464,
+            410,
+            702,
+            756
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            875,
+            416,
+            1093,
+            753
+          ],
+          "padded_source_rect_xyxy": [
+            872,
+            413,
+            1096,
+            756
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1235,
+            427,
+            1499,
+            754
+          ],
+          "padded_source_rect_xyxy": [
+            1232,
+            424,
+            1502,
+            757
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1653,
+            466,
+            1938,
+            765
+          ],
+          "padded_source_rect_xyxy": [
+            1650,
+            463,
+            1941,
+            768
+          ]
+        }
+      ]
+    },
+    "garlic_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            36,
+            81,
+            388,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            33,
+            78,
+            391,
+            377
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            433,
+            81,
+            782,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            430,
+            78,
+            785,
+            377
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            817,
+            69,
+            1180,
+            388
+          ],
+          "padded_source_rect_xyxy": [
+            814,
+            66,
+            1183,
+            391
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1206,
+            81,
+            1563,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            1203,
+            78,
+            1566,
+            377
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1596,
+            81,
+            1947,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            1593,
+            78,
+            1950,
+            377
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            35,
+            431,
+            388,
+            727
+          ],
+          "padded_source_rect_xyxy": [
+            32,
+            428,
+            391,
+            730
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            419,
+            431,
+            772,
+            727
+          ],
+          "padded_source_rect_xyxy": [
+            416,
+            428,
+            775,
+            730
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            798,
+            431,
+            1161,
+            727
+          ],
+          "padded_source_rect_xyxy": [
+            795,
+            428,
+            1164,
+            730
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1193,
+            435,
+            1559,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            1190,
+            432,
+            1562,
+            744
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1596,
+            492,
+            1948,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            1593,
+            489,
+            1951,
+            744
+          ]
+        }
+      ]
+    },
+    "grater_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            24,
+            162,
+            401,
+            342
+          ],
+          "padded_source_rect_xyxy": [
+            21,
+            159,
+            404,
+            345
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            412,
+            162,
+            790,
+            342
+          ],
+          "padded_source_rect_xyxy": [
+            409,
+            159,
+            793,
+            345
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            794,
+            134,
+            1182,
+            347
+          ],
+          "padded_source_rect_xyxy": [
+            791,
+            131,
+            1185,
+            350
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1190,
+            162,
+            1573,
+            342
+          ],
+          "padded_source_rect_xyxy": [
+            1187,
+            159,
+            1576,
+            345
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1582,
+            162,
+            1959,
+            342
+          ],
+          "padded_source_rect_xyxy": [
+            1579,
+            159,
+            1962,
+            345
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            24,
+            498,
+            401,
+            679
+          ],
+          "padded_source_rect_xyxy": [
+            21,
+            495,
+            404,
+            682
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            412,
+            497,
+            790,
+            679
+          ],
+          "padded_source_rect_xyxy": [
+            409,
+            494,
+            793,
+            682
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            805,
+            497,
+            1181,
+            679
+          ],
+          "padded_source_rect_xyxy": [
+            802,
+            494,
+            1184,
+            682
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1184,
+            462,
+            1571,
+            687
+          ],
+          "padded_source_rect_xyxy": [
+            1181,
+            459,
+            1574,
+            690
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1582,
+            493,
+            1957,
+            690
+          ],
+          "padded_source_rect_xyxy": [
+            1579,
+            490,
+            1960,
+            693
+          ]
+        }
+      ]
+    },
+    "mustard_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            142,
+            37,
+            346,
+            367
+          ],
+          "padded_source_rect_xyxy": [
+            139,
+            34,
+            349,
+            370
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            505,
+            37,
+            709,
+            367
+          ],
+          "padded_source_rect_xyxy": [
+            502,
+            34,
+            712,
+            370
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            866,
+            81,
+            1087,
+            367
+          ],
+          "padded_source_rect_xyxy": [
+            863,
+            78,
+            1090,
+            370
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1239,
+            37,
+            1443,
+            367
+          ],
+          "padded_source_rect_xyxy": [
+            1236,
+            34,
+            1446,
+            370
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1607,
+            37,
+            1812,
+            367
+          ],
+          "padded_source_rect_xyxy": [
+            1604,
+            34,
+            1815,
+            370
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            142,
+            404,
+            346,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            139,
+            401,
+            349,
+            739
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            504,
+            407,
+            710,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            501,
+            404,
+            713,
+            739
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            873,
+            402,
+            1082,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            870,
+            399,
+            1085,
+            739
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1249,
+            399,
+            1472,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            1246,
+            396,
+            1475,
+            739
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1595,
+            427,
+            1845,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            1592,
+            424,
+            1848,
+            739
+          ]
+        }
+      ]
+    },
+    "myoga_keyposes_v01.png": {
+      "size": [
+        1536,
+        1024
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            63,
+            47,
+            284,
+            503
+          ],
+          "padded_source_rect_xyxy": [
+            60,
+            44,
+            287,
+            506
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            356,
+            48,
+            574,
+            503
+          ],
+          "padded_source_rect_xyxy": [
+            353,
+            45,
+            577,
+            506
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            623,
+            113,
+            912,
+            503
+          ],
+          "padded_source_rect_xyxy": [
+            620,
+            110,
+            915,
+            506
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            957,
+            47,
+            1181,
+            503
+          ],
+          "padded_source_rect_xyxy": [
+            954,
+            44,
+            1184,
+            506
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1254,
+            47,
+            1476,
+            503
+          ],
+          "padded_source_rect_xyxy": [
+            1251,
+            44,
+            1479,
+            506
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            57,
+            528,
+            286,
+            974
+          ],
+          "padded_source_rect_xyxy": [
+            54,
+            525,
+            289,
+            977
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            367,
+            548,
+            589,
+            974
+          ],
+          "padded_source_rect_xyxy": [
+            364,
+            545,
+            592,
+            977
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            643,
+            528,
+            867,
+            974
+          ],
+          "padded_source_rect_xyxy": [
+            640,
+            525,
+            870,
+            977
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            953,
+            556,
+            1207,
+            974
+          ],
+          "padded_source_rect_xyxy": [
+            950,
+            553,
+            1210,
+            977
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1242,
+            634,
+            1507,
+            974
+          ],
+          "padded_source_rect_xyxy": [
+            1239,
+            631,
+            1510,
+            977
+          ]
+        }
+      ]
+    },
+    "negi_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            154,
+            16,
+            340,
+            390
+          ],
+          "padded_source_rect_xyxy": [
+            151,
+            13,
+            343,
+            393
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            545,
+            16,
+            731,
+            390
+          ],
+          "padded_source_rect_xyxy": [
+            542,
+            13,
+            734,
+            393
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            907,
+            27,
+            1111,
+            389
+          ],
+          "padded_source_rect_xyxy": [
+            904,
+            24,
+            1114,
+            392
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1256,
+            16,
+            1449,
+            389
+          ],
+          "padded_source_rect_xyxy": [
+            1253,
+            13,
+            1452,
+            392
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1644,
+            15,
+            1833,
+            389
+          ],
+          "padded_source_rect_xyxy": [
+            1641,
+            12,
+            1836,
+            392
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            153,
+            407,
+            349,
+            778
+          ],
+          "padded_source_rect_xyxy": [
+            150,
+            404,
+            352,
+            781
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            491,
+            412,
+            726,
+            778
+          ],
+          "padded_source_rect_xyxy": [
+            488,
+            409,
+            729,
+            781
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            908,
+            407,
+            1104,
+            778
+          ],
+          "padded_source_rect_xyxy": [
+            905,
+            404,
+            1107,
+            781
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1242,
+            407,
+            1499,
+            778
+          ],
+          "padded_source_rect_xyxy": [
+            1239,
+            404,
+            1502,
+            781
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1619,
+            483,
+            1872,
+            778
+          ],
+          "padded_source_rect_xyxy": [
+            1616,
+            480,
+            1875,
+            781
+          ]
+        }
+      ]
+    },
+    "oba_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            63,
+            17,
+            397,
+            391
+          ],
+          "padded_source_rect_xyxy": [
+            60,
+            14,
+            400,
+            394
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            472,
+            17,
+            802,
+            391
+          ],
+          "padded_source_rect_xyxy": [
+            469,
+            14,
+            805,
+            394
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            881,
+            50,
+            1194,
+            391
+          ],
+          "padded_source_rect_xyxy": [
+            878,
+            47,
+            1197,
+            394
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1239,
+            17,
+            1560,
+            391
+          ],
+          "padded_source_rect_xyxy": [
+            1236,
+            14,
+            1563,
+            394
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1604,
+            17,
+            1924,
+            391
+          ],
+          "padded_source_rect_xyxy": [
+            1601,
+            14,
+            1927,
+            394
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            53,
+            405,
+            388,
+            774
+          ],
+          "padded_source_rect_xyxy": [
+            50,
+            402,
+            391,
+            777
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            453,
+            405,
+            782,
+            774
+          ],
+          "padded_source_rect_xyxy": [
+            450,
+            402,
+            785,
+            777
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            829,
+            405,
+            1153,
+            774
+          ],
+          "padded_source_rect_xyxy": [
+            826,
+            402,
+            1156,
+            777
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1253,
+            418,
+            1565,
+            774
+          ],
+          "padded_source_rect_xyxy": [
+            1250,
+            415,
+            1568,
+            777
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1620,
+            442,
+            1930,
+            767
+          ],
+          "padded_source_rect_xyxy": [
+            1617,
+            439,
+            1933,
+            770
+          ]
+        }
+      ]
+    },
+    "okra_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            26,
+            108,
+            395,
+            321
+          ],
+          "padded_source_rect_xyxy": [
+            23,
+            105,
+            398,
+            324
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            419,
+            109,
+            790,
+            321
+          ],
+          "padded_source_rect_xyxy": [
+            416,
+            106,
+            793,
+            324
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            812,
+            82,
+            1168,
+            323
+          ],
+          "padded_source_rect_xyxy": [
+            809,
+            79,
+            1171,
+            326
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1192,
+            111,
+            1572,
+            320
+          ],
+          "padded_source_rect_xyxy": [
+            1189,
+            108,
+            1575,
+            323
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1595,
+            110,
+            1962,
+            320
+          ],
+          "padded_source_rect_xyxy": [
+            1592,
+            107,
+            1965,
+            323
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            25,
+            480,
+            395,
+            693
+          ],
+          "padded_source_rect_xyxy": [
+            22,
+            477,
+            398,
+            696
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            421,
+            485,
+            788,
+            695
+          ],
+          "padded_source_rect_xyxy": [
+            418,
+            482,
+            791,
+            698
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            809,
+            486,
+            1183,
+            695
+          ],
+          "padded_source_rect_xyxy": [
+            806,
+            483,
+            1186,
+            698
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1202,
+            472,
+            1572,
+            666
+          ],
+          "padded_source_rect_xyxy": [
+            1199,
+            469,
+            1575,
+            669
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1602,
+            445,
+            1962,
+            714
+          ],
+          "padded_source_rect_xyxy": [
+            1599,
+            442,
+            1965,
+            717
+          ]
+        }
+      ]
+    },
+    "okra_slice_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            30,
+            76,
+            315,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            27,
+            73,
+            318,
+            349
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            449,
+            76,
+            738,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            446,
+            73,
+            741,
+            349
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            860,
+            76,
+            1139,
+            360
+          ],
+          "padded_source_rect_xyxy": [
+            857,
+            73,
+            1142,
+            363
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1241,
+            76,
+            1531,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            1238,
+            73,
+            1534,
+            349
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1649,
+            76,
+            1934,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            1646,
+            73,
+            1937,
+            349
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            31,
+            448,
+            326,
+            720
+          ],
+          "padded_source_rect_xyxy": [
+            28,
+            445,
+            329,
+            723
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            449,
+            448,
+            744,
+            720
+          ],
+          "padded_source_rect_xyxy": [
+            446,
+            445,
+            747,
+            723
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            845,
+            448,
+            1139,
+            721
+          ],
+          "padded_source_rect_xyxy": [
+            842,
+            445,
+            1142,
+            724
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1263,
+            448,
+            1545,
+            733
+          ],
+          "padded_source_rect_xyxy": [
+            1260,
+            445,
+            1548,
+            736
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1657,
+            481,
+            1934,
+            718
+          ],
+          "padded_source_rect_xyxy": [
+            1654,
+            478,
+            1937,
+            721
+          ]
+        }
+      ]
+    },
+    "sansho_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            18,
+            150,
+            388,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            15,
+            147,
+            391,
+            349
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            426,
+            150,
+            793,
+            345
+          ],
+          "padded_source_rect_xyxy": [
+            423,
+            147,
+            796,
+            348
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            827,
+            111,
+            1168,
+            357
+          ],
+          "padded_source_rect_xyxy": [
+            824,
+            108,
+            1171,
+            360
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1201,
+            146,
+            1567,
+            350
+          ],
+          "padded_source_rect_xyxy": [
+            1198,
+            143,
+            1570,
+            353
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1593,
+            150,
+            1961,
+            346
+          ],
+          "padded_source_rect_xyxy": [
+            1590,
+            147,
+            1964,
+            349
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            24,
+            499,
+            393,
+            700
+          ],
+          "padded_source_rect_xyxy": [
+            21,
+            496,
+            396,
+            703
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            420,
+            488,
+            780,
+            700
+          ],
+          "padded_source_rect_xyxy": [
+            417,
+            485,
+            783,
+            703
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            822,
+            489,
+            1184,
+            700
+          ],
+          "padded_source_rect_xyxy": [
+            819,
+            486,
+            1187,
+            703
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1207,
+            478,
+            1593,
+            700
+          ],
+          "padded_source_rect_xyxy": [
+            1204,
+            475,
+            1596,
+            703
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1602,
+            518,
+            1955,
+            700
+          ],
+          "padded_source_rect_xyxy": [
+            1599,
+            515,
+            1958,
+            703
+          ]
+        }
+      ]
+    },
+    "shiso_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            46,
+            16,
+            361,
+            393
+          ],
+          "padded_source_rect_xyxy": [
+            43,
+            13,
+            364,
+            396
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            430,
+            16,
+            752,
+            393
+          ],
+          "padded_source_rect_xyxy": [
+            427,
+            13,
+            755,
+            396
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            819,
+            25,
+            1160,
+            393
+          ],
+          "padded_source_rect_xyxy": [
+            816,
+            22,
+            1163,
+            396
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1228,
+            16,
+            1553,
+            394
+          ],
+          "padded_source_rect_xyxy": [
+            1225,
+            13,
+            1556,
+            397
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1620,
+            16,
+            1942,
+            393
+          ],
+          "padded_source_rect_xyxy": [
+            1617,
+            13,
+            1945,
+            396
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            45,
+            401,
+            362,
+            773
+          ],
+          "padded_source_rect_xyxy": [
+            42,
+            398,
+            365,
+            776
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            432,
+            401,
+            756,
+            773
+          ],
+          "padded_source_rect_xyxy": [
+            429,
+            398,
+            759,
+            776
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            831,
+            401,
+            1154,
+            773
+          ],
+          "padded_source_rect_xyxy": [
+            828,
+            398,
+            1157,
+            776
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1251,
+            401,
+            1562,
+            773
+          ],
+          "padded_source_rect_xyxy": [
+            1248,
+            398,
+            1565,
+            776
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1619,
+            454,
+            1940,
+            773
+          ],
+          "padded_source_rect_xyxy": [
+            1616,
+            451,
+            1943,
+            776
+          ]
+        }
+      ]
+    },
+    "shoga_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            59,
+            31,
+            381,
+            379
+          ],
+          "padded_source_rect_xyxy": [
+            56,
+            28,
+            384,
+            382
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            451,
+            30,
+            761,
+            379
+          ],
+          "padded_source_rect_xyxy": [
+            448,
+            27,
+            764,
+            382
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            833,
+            31,
+            1141,
+            379
+          ],
+          "padded_source_rect_xyxy": [
+            830,
+            28,
+            1144,
+            382
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1207,
+            31,
+            1528,
+            379
+          ],
+          "padded_source_rect_xyxy": [
+            1204,
+            28,
+            1531,
+            382
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1592,
+            31,
+            1940,
+            379
+          ],
+          "padded_source_rect_xyxy": [
+            1589,
+            28,
+            1943,
+            382
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            98,
+            417,
+            346,
+            766
+          ],
+          "padded_source_rect_xyxy": [
+            95,
+            414,
+            349,
+            769
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            488,
+            417,
+            749,
+            766
+          ],
+          "padded_source_rect_xyxy": [
+            485,
+            414,
+            752,
+            769
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            837,
+            418,
+            1152,
+            766
+          ],
+          "padded_source_rect_xyxy": [
+            834,
+            415,
+            1155,
+            769
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1225,
+            417,
+            1568,
+            766
+          ],
+          "padded_source_rect_xyxy": [
+            1222,
+            414,
+            1571,
+            769
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1647,
+            449,
+            1898,
+            764
+          ],
+          "padded_source_rect_xyxy": [
+            1644,
+            446,
+            1901,
+            767
+          ]
+        }
+      ]
+    },
+    "sudachi_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            37,
+            66,
+            366,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            34,
+            63,
+            369,
+            377
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            432,
+            66,
+            762,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            429,
+            63,
+            765,
+            377
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            826,
+            78,
+            1156,
+            377
+          ],
+          "padded_source_rect_xyxy": [
+            823,
+            75,
+            1159,
+            380
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1222,
+            66,
+            1551,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            1219,
+            63,
+            1554,
+            377
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1616,
+            66,
+            1944,
+            374
+          ],
+          "padded_source_rect_xyxy": [
+            1613,
+            63,
+            1947,
+            377
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            37,
+            429,
+            366,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            34,
+            426,
+            369,
+            744
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            434,
+            428,
+            768,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            431,
+            425,
+            771,
+            744
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            826,
+            429,
+            1156,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            823,
+            426,
+            1159,
+            744
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1207,
+            434,
+            1541,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            1204,
+            431,
+            1544,
+            744
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1625,
+            467,
+            1945,
+            741
+          ],
+          "padded_source_rect_xyxy": [
+            1622,
+            464,
+            1948,
+            744
+          ]
+        }
+      ]
+    },
+    "wasabi_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            173,
+            19,
+            337,
+            383
+          ],
+          "padded_source_rect_xyxy": [
+            170,
+            16,
+            340,
+            386
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            544,
+            19,
+            712,
+            383
+          ],
+          "padded_source_rect_xyxy": [
+            541,
+            16,
+            715,
+            386
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            877,
+            16,
+            1098,
+            383
+          ],
+          "padded_source_rect_xyxy": [
+            874,
+            13,
+            1101,
+            386
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1266,
+            18,
+            1436,
+            384
+          ],
+          "padded_source_rect_xyxy": [
+            1263,
+            15,
+            1439,
+            387
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1620,
+            16,
+            1789,
+            385
+          ],
+          "padded_source_rect_xyxy": [
+            1617,
+            13,
+            1792,
+            388
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            169,
+            405,
+            343,
+            775
+          ],
+          "padded_source_rect_xyxy": [
+            166,
+            402,
+            346,
+            778
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            480,
+            405,
+            723,
+            774
+          ],
+          "padded_source_rect_xyxy": [
+            477,
+            402,
+            726,
+            777
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            902,
+            405,
+            1082,
+            775
+          ],
+          "padded_source_rect_xyxy": [
+            899,
+            402,
+            1085,
+            778
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1241,
+            405,
+            1503,
+            775
+          ],
+          "padded_source_rect_xyxy": [
+            1238,
+            402,
+            1506,
+            778
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1611,
+            458,
+            1897,
+            770
+          ],
+          "padded_source_rect_xyxy": [
+            1608,
+            455,
+            1900,
+            773
+          ]
+        }
+      ]
+    },
+    "wasabi_tube_keyposes_v01.png": {
+      "size": [
+        1536,
+        1024
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            77,
+            47,
+            270,
+            465
+          ],
+          "padded_source_rect_xyxy": [
+            74,
+            44,
+            273,
+            468
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            368,
+            46,
+            561,
+            465
+          ],
+          "padded_source_rect_xyxy": [
+            365,
+            43,
+            564,
+            468
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            640,
+            40,
+            885,
+            470
+          ],
+          "padded_source_rect_xyxy": [
+            637,
+            37,
+            888,
+            473
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            968,
+            47,
+            1161,
+            466
+          ],
+          "padded_source_rect_xyxy": [
+            965,
+            44,
+            1164,
+            469
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1277,
+            46,
+            1471,
+            465
+          ],
+          "padded_source_rect_xyxy": [
+            1274,
+            43,
+            1474,
+            468
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            80,
+            529,
+            274,
+            946
+          ],
+          "padded_source_rect_xyxy": [
+            77,
+            526,
+            277,
+            949
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            366,
+            529,
+            560,
+            946
+          ],
+          "padded_source_rect_xyxy": [
+            363,
+            526,
+            563,
+            949
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            671,
+            528,
+            867,
+            946
+          ],
+          "padded_source_rect_xyxy": [
+            668,
+            525,
+            870,
+            949
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            969,
+            523,
+            1222,
+            954
+          ],
+          "padded_source_rect_xyxy": [
+            966,
+            520,
+            1225,
+            957
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1276,
+            571,
+            1517,
+            953
+          ],
+          "padded_source_rect_xyxy": [
+            1273,
+            568,
+            1520,
+            956
+          ]
+        }
+      ]
+    },
+    "yuzu_keyposes_v01.png": {
+      "size": [
+        1983,
+        793
+      ],
+      "poses": [
+        {
+          "animation": "idle",
+          "tight_alpha128_rect_xyxy": [
+            40,
+            109,
+            372,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            37,
+            106,
+            375,
+            369
+          ]
+        },
+        {
+          "animation": "blink",
+          "tight_alpha128_rect_xyxy": [
+            431,
+            111,
+            766,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            428,
+            108,
+            769,
+            369
+          ]
+        },
+        {
+          "animation": "walk",
+          "tight_alpha128_rect_xyxy": [
+            815,
+            115,
+            1154,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            812,
+            112,
+            1157,
+            369
+          ]
+        },
+        {
+          "animation": "cheer",
+          "tight_alpha128_rect_xyxy": [
+            1209,
+            107,
+            1549,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            1206,
+            104,
+            1552,
+            369
+          ]
+        },
+        {
+          "animation": "surprise",
+          "tight_alpha128_rect_xyxy": [
+            1607,
+            108,
+            1938,
+            366
+          ],
+          "padded_source_rect_xyxy": [
+            1604,
+            105,
+            1941,
+            369
+          ]
+        },
+        {
+          "animation": "worry",
+          "tight_alpha128_rect_xyxy": [
+            40,
+            481,
+            372,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            37,
+            478,
+            375,
+            739
+          ]
+        },
+        {
+          "animation": "think",
+          "tight_alpha128_rect_xyxy": [
+            430,
+            477,
+            762,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            427,
+            474,
+            765,
+            739
+          ]
+        },
+        {
+          "animation": "talk",
+          "tight_alpha128_rect_xyxy": [
+            822,
+            480,
+            1159,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            819,
+            477,
+            1162,
+            739
+          ]
+        },
+        {
+          "animation": "point",
+          "tight_alpha128_rect_xyxy": [
+            1231,
+            492,
+            1556,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            1228,
+            489,
+            1559,
+            739
+          ]
+        },
+        {
+          "animation": "bow",
+          "tight_alpha128_rect_xyxy": [
+            1626,
+            516,
+            1938,
+            736
+          ],
+          "padded_source_rect_xyxy": [
+            1623,
+            513,
+            1941,
+            739
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>やくみ組 ドットアニメ再生サンプル</title>
+  <style>
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f5f4eb; color:#293129; font:15px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif; }
+    main { max-width:1100px; margin:auto; padding:42px 28px; }
+    a { color:#286443; text-underline-offset:3px; }
+    h1 { margin:12px 0; font-size:clamp(26px,4vw,36px); line-height:1.4; }
+    .intro { color:#627062; max-width:760px; }
+    .layout { display:grid; grid-template-columns:minmax(280px,1fr) minmax(290px,1fr); gap:30px; align-items:start; margin-top:28px; }
+    .stage { border:1px solid #d3dac8; border-radius:18px; padding:22px; aspect-ratio:1; background-color:#f7f9ed; background-image:linear-gradient(45deg,#dfe5d3 25%,transparent 25%),linear-gradient(-45deg,#dfe5d3 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dfe5d3 75%),linear-gradient(-45deg,transparent 75%,#dfe5d3 75%); background-size:24px 24px; background-position:0 0,0 12px,12px -12px,-12px 0; }
+    .stage[data-background="white"] { background:#fff; }
+    .stage[data-background="dark"] { background:#263a37; }
+    canvas { display:block; width:100%; height:auto; image-rendering:pixelated; image-rendering:crisp-edges; }
+    .controls { border:1px solid #dbdfce; background:#fff; padding:24px; border-radius:18px; }
+    label { display:block; margin:0 0 15px; }
+    label > span { display:block; font-size:12px; font-weight:700; color:#627062; margin-bottom:5px; }
+    button, select, input { font:inherit; }
+    select { width:100%; padding:9px 11px; border:1px solid #b9c4ad; border-radius:8px; color:#293129; background:#fff; }
+    button { border:1px solid #b9c4ad; border-radius:8px; color:#293129; background:#fff; padding:9px 13px; cursor:pointer; }
+    button:disabled { opacity:.5; cursor:default; }
+    button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline:3px solid #73a4da; outline-offset:3px; }
+    #play { color:#fff; background:#286443; border-color:#286443; min-width:114px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+    .timeline { display:flex; gap:10px; align-items:center; margin:16px 0 0; }
+    .timeline input { width:100%; min-width:80px; accent-color:#286443; }
+    .timeline > span { flex-shrink:0; margin:0; white-space:nowrap; }
+    .timeline output { font:12px ui-monospace,Consolas,monospace; white-space:nowrap; }
+    #status { color:#627062; font-size:13px; min-height:24px; }
+    #anatomy { color:#627062; font-size:12px; margin:0 0 16px; }
+    .downloads { display:flex; gap:12px; flex-wrap:wrap; border-top:1px solid #dbdfce; padding-top:16px; font-size:13px; }
+    .recipe { margin-top:32px; }
+    .recipe h2 { font-size:20px; }
+    .recipe p { color:#627062; }
+    pre { overflow:auto; border:1px solid #d3dac8; border-radius:14px; padding:20px; background:#eaf0df; font:13px/1.8 ui-monospace,"SFMono-Regular",Consolas,monospace; }
+    code { font-family:ui-monospace,"SFMono-Regular",Consolas,monospace; }
+    footer { border-top:1px solid #dbdfce; padding-top:20px; margin-top:30px; font-size:12px; color:#627062; }
+    [hidden] { display:none !important; }
+    @media (max-width:720px) { main { padding:26px 16px; } .layout { grid-template-columns:1fr; gap:18px; } .stage { max-width:440px; width:100%; margin:auto; } .controls { padding:20px; } }
+  </style>
+</head>
+<body>
+<main>
+  <a href="../docs/pixel-gallery.html">← 全キャラ・全モーションのギャラリー</a>
+  <h1>1体の動きを再生する</h1>
+  <p class="intro">キャラクターと動きを切り替えながら、透過 PNG スプライトシートの再生を試せます。停止して1コマずつ確認したり、左右反転して画面の向きを合わせたりできます。</p>
+  <p class="intro">Gitから取得した場合は、プロジェクト直下で <code>npm run pixel:build</code> を実行してから開いてください。生成済み配布パックは展開後にそのまま再生できます。<a href="../docs/PIXEL-ASSETS.md">初回生成の手順</a></p>
+  <div class="layout">
+    <div id="stage" class="stage" data-background="checker"><canvas id="sprite" width="256" height="256" role="img" aria-label="キャラクターのアニメーション"></canvas></div>
+    <section class="controls" aria-label="再生コントロール">
+      <label><span>キャラクター</span><select id="character" disabled></select></label>
+      <label id="variant-field" hidden><span>形状</span><select id="variant" disabled><option value="">基本形</option></select></label>
+      <label><span>動き</span><select id="motion" disabled></select></label>
+      <p id="anatomy"></p>
+      <label><span>背景</span><select id="background"><option value="checker">透過確認</option><option value="white">白</option><option value="dark">暗い背景</option></select></label>
+      <div class="buttons"><button id="play" type="button" disabled>一時停止</button><button id="step" type="button" disabled>1コマ進む</button><button id="flip" type="button" aria-pressed="false">左右反転</button></div>
+      <label class="timeline"><span>コマ</span><input id="timeline" type="range" min="0" max="23" value="0" disabled><output id="frame-count" for="timeline">01 / 24</output></label>
+      <p id="status" role="status" aria-live="polite"></p>
+      <div id="downloads" class="downloads"></div>
+    </section>
+  </div>
+  <noscript><p>再生には JavaScript を有効にしてください。</p></noscript>
+  <section class="recipe">
+    <h2>別のページに組み込む</h2>
+    <p>キャラクターとモーションの ID を選び、以下のようにシートの1コマを canvas に描きます。パスは、このサンプルと同じ <code>examples/</code> フォルダーからの相対パスです。</p>
+    <pre><code id="code-sample"></code></pre>
+  </section>
+  <footer>初回生成後、または生成済み配布パックを展開後に、この HTML を直接開くと動作します。<a href="../assets/pixel/manifest.json" download>メタデータ JSON</a> / <a href="../ASSET-LICENSE.md">素材の利用条件</a> / <a href="../LICENSE">MIT License</a></footer>
+</main>
+<script src="../assets/pixel/manifest.js"></script>
+<script>
+'use strict';
+(() => {
+  const manifest = globalThis.YAKUMIGUMI_PIXEL_MANIFEST;
+  const characterSelect = document.getElementById('character');
+  const variantSelect = document.getElementById('variant');
+  const motionSelect = document.getElementById('motion');
+  const canvas = document.getElementById('sprite');
+  const ctx = canvas.getContext('2d');
+  const playButton = document.getElementById('play');
+  const stepButton = document.getElementById('step');
+  const flipButton = document.getElementById('flip');
+  const timeline = document.getElementById('timeline');
+  const frameOutput = document.getElementById('frame-count');
+  const status = document.getElementById('status');
+  const assetRoot = new URL('../assets/pixel/', location.href);
+  let image = null;
+  let frame = 0;
+  let elapsed = 0;
+  let lastTime = null;
+  let lastFrame = -1;
+  let playing = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let flipped = false;
+  let request = 0;
+  let loadId = 0;
+  const order = ['idle', 'blink', 'walk', 'cheer', 'surprise', 'worry', 'think', 'talk', 'point', 'bow'];
+  if (!manifest || manifest.schemaVersion !== 1 || !manifest.characters || !manifest.motions || !Object.keys(manifest.characters).length) {
+    status.textContent = '素材データを読み込めません。Gitから取得した場合は npm run pixel:build を実行してください。生成済みパックはフォルダー全体を展開してください。';
+    return;
+  }
+  const { size, fps, frames, columns, rows } = manifest;
+  if (![size, fps, frames, columns, rows].every(value => Number.isInteger(value) && value > 0) || frames > columns * rows) {
+    status.textContent = 'メタデータのコマサイズ・FPS・コマ数・列数・行数を確認してください。';
+    return;
+  }
+  const duration = frames / fps;
+  canvas.width = canvas.height = size;
+  ctx.imageSmoothingEnabled = false;
+  timeline.max = String(frames - 1);
+  function localUrl(relative) {
+    if (typeof relative !== 'string' || !relative || relative.startsWith('/') || relative.includes('\\') || /(^|\/)\.\.?(\/|$)/.test(relative) || /^[a-z]+:/i.test(relative)) return null;
+    const url = new URL(relative, assetRoot);
+    return url.href.startsWith(assetRoot.href) ? url.href : null;
+  }
+  function label(id) { return manifest.motions[id]?.label || id; }
+  function draw(force = false) {
+    if (!image || (!force && frame === lastFrame)) return;
+    ctx.clearRect(0, 0, size, size);
+    ctx.save();
+    if (flipped) { ctx.translate(size, 0); ctx.scale(-1, 1); }
+    ctx.drawImage(image, (frame % columns) * size, Math.floor(frame / columns) * size, size, size, 0, 0, size, size);
+    ctx.restore();
+    timeline.value = String(frame);
+    frameOutput.value = `${String(frame + 1).padStart(2, '0')} / ${frames}`;
+    lastFrame = frame;
+  }
+  function updatePlay() { playButton.textContent = playing ? '一時停止' : '再生'; }
+  function updateCode() {
+    const characterId = JSON.stringify(characterSelect.value);
+    const variantId = JSON.stringify(variantSelect.value);
+    const motionId = JSON.stringify(motionSelect.value);
+    const actionCode = variantSelect.value ? `const shape = m.variants[${variantId}];\nif (shape.parent !== ${characterId}) {\n  throw new Error('形状とキャラクターが一致しません');\n}\nconst action = shape.animations[${motionId}];` : `const action = m.characters[${characterId}].animations[${motionId}];`;
+    document.getElementById('code-sample').textContent = `<canvas id="character" width="${size}" height="${size}"></canvas>\n<script src="../assets/pixel/manifest.js"><\/script>\n<script>\nconst m = globalThis.YAKUMIGUMI_PIXEL_MANIFEST;\n${actionCode}\nconst canvas = document.getElementById('character');\nconst ctx = canvas.getContext('2d');\nctx.imageSmoothingEnabled = false;\nconst sheet = new Image();\nsheet.src = '../assets/pixel/' + action.sheet;\nsheet.onload = () => {\n  const started = performance.now();\n  function draw(now) {\n    const i = Math.floor((now - started) / 1000 * m.fps) % m.frames;\n    ctx.clearRect(0, 0, m.size, m.size);\n    ctx.drawImage(sheet, (i % m.columns) * m.size,\n      Math.floor(i / m.columns) * m.size, m.size, m.size,\n      0, 0, m.size, m.size);\n    requestAnimationFrame(draw);\n  }\n  requestAnimationFrame(draw);\n};\n<\/script>`;
+  }
+  function selectedSprite() {
+    if (!variantSelect.value) return manifest.characters[characterSelect.value];
+    const variant = manifest.variants?.[variantSelect.value];
+    return variant?.parent === characterSelect.value ? variant : null;
+  }
+  function loadAnimation() {
+    const thisLoad = ++loadId;
+    const character = selectedSprite();
+    const animation = character?.animations?.[motionSelect.value];
+    image = null;
+    frame = 0;
+    elapsed = 0;
+    lastTime = null;
+    lastFrame = -1;
+    ctx.clearRect(0, 0, size, size);
+    timeline.value = '0';
+    frameOutput.value = `01 / ${frames}`;
+    [playButton, stepButton, timeline].forEach(control => { control.disabled = true; });
+    const downloads = document.getElementById('downloads');
+    downloads.replaceChildren();
+    document.getElementById('anatomy').textContent = character?.anatomy || '';
+    canvas.setAttribute('aria-label', `${character?.name || characterSelect.value}：${label(motionSelect.value)}`);
+    updateCode();
+    if (!character) { status.textContent = '形状とキャラクターが一致しません。形状を選び直してください。'; return; }
+    if (!animation || !localUrl(animation.sheet)) { status.textContent = 'この動きのシートは準備中です。'; return; }
+    for (const [format, path] of [['PNG シート', animation.sheet], ['GIF', animation.gif], ['APNG', animation.apng], ['1コマ目', animation.frames?.[0]]]) {
+      const href = localUrl(path);
+      if (!href) continue;
+      const a = document.createElement('a');
+      a.href = href;
+      a.download = `${variantSelect.value || characterSelect.value}-${motionSelect.value}-${path.split('/').pop()}`;
+      a.textContent = format;
+      downloads.append(a);
+    }
+    status.textContent = '画像を読み込み中…';
+    const sheet = new Image();
+    sheet.onload = () => {
+      if (thisLoad !== loadId) return;
+      if (sheet.naturalWidth !== size * columns || sheet.naturalHeight !== size * rows) { status.textContent = 'シートの大きさがメタデータと一致しません。'; return; }
+      image = sheet;
+      [playButton, stepButton, timeline].forEach(control => { control.disabled = false; });
+      status.textContent = `${size} × ${size} / ${fps} fps / ${frames} コマ / ${duration} 秒ループ`;
+      draw(true);
+    };
+    sheet.onerror = () => { if (thisLoad === loadId) status.textContent = '画像が見つかりません。Gitから取得した場合は npm run pixel:build で生成してください。'; };
+    sheet.src = localUrl(animation.sheet);
+  }
+  function chooseShape() {
+    const previous = motionSelect.value;
+    const available = Object.keys(selectedSprite()?.animations || {});
+    motionSelect.replaceChildren();
+    [...order.filter(id => available.includes(id)), ...available.filter(id => !order.includes(id))].forEach(id => motionSelect.append(new Option(label(id), id)));
+    if (available.includes(previous)) motionSelect.value = previous;
+    loadAnimation();
+  }
+  function chooseCharacter() {
+    const previous = variantSelect.value;
+    const shapes = Object.entries(manifest.variants || {}).filter(([, variant]) => variant.parent === characterSelect.value);
+    variantSelect.replaceChildren(new Option('基本形', ''));
+    shapes.forEach(([id, variant]) => variantSelect.append(new Option(variant.name || id, id)));
+    if (shapes.some(([id]) => id === previous)) variantSelect.value = previous;
+    document.getElementById('variant-field').hidden = !shapes.length;
+    variantSelect.disabled = !shapes.length;
+    chooseShape();
+  }
+  function tick(time) {
+    if (playing && image && !document.hidden && lastTime !== null) elapsed = (elapsed + Math.min((time - lastTime) / 1000, .25)) % duration;
+    lastTime = time;
+    frame = Math.floor(elapsed * fps) % frames;
+    draw();
+    request = requestAnimationFrame(tick);
+  }
+  for (const [id, character] of Object.entries(manifest.characters)) characterSelect.append(new Option(character.name || id, id));
+  const params = new URLSearchParams(location.search);
+  if (manifest.characters[params.get('character')]) characterSelect.value = params.get('character');
+  [characterSelect, motionSelect].forEach(select => { select.disabled = false; });
+  characterSelect.addEventListener('change', chooseCharacter);
+  variantSelect.addEventListener('change', chooseShape);
+  motionSelect.addEventListener('change', loadAnimation);
+  document.getElementById('background').addEventListener('change', event => { document.getElementById('stage').dataset.background = event.target.value; });
+  playButton.addEventListener('click', () => { playing = !playing; lastTime = null; updatePlay(); });
+  stepButton.addEventListener('click', () => { playing = false; frame = (frame + 1) % frames; elapsed = frame / fps; lastTime = null; updatePlay(); draw(true); });
+  timeline.addEventListener('input', () => { playing = false; frame = Number(timeline.value); elapsed = frame / fps; lastTime = null; updatePlay(); draw(true); });
+  flipButton.addEventListener('click', () => { flipped = !flipped; flipButton.setAttribute('aria-pressed', String(flipped)); draw(true); });
+  document.addEventListener('visibilitychange', () => { lastTime = null; });
+  globalThis.addEventListener('pagehide', () => cancelAnimationFrame(request));
+  chooseCharacter();
+  if (manifest.variants?.[params.get('variant')]?.parent === characterSelect.value) { variantSelect.value = params.get('variant'); chooseShape(); }
+  if ([...motionSelect.options].some(option => option.value === params.get('motion'))) { motionSelect.value = params.get('motion'); loadAnimation(); }
+  updatePlay();
+  request = requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

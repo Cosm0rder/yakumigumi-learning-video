@@ -1,4 +1,5 @@
 node_modules/
+.npm-cache/
 output/*
 !output/.gitkeep
 audio/*
@@ -17,3 +18,20 @@ credentials*.json
 Thumbs.db
 __pycache__/
 
+# New pixel assets: commit source sheets and normalized poses, regenerate outputs.
+/assets/pixel/*/*.png
+/assets/pixel/*/frames/
+/assets/pixel/*/previews/
+/assets/pixel/*/poses/*
+!/assets/pixel/*/poses/drawn-v01/
+/assets/pixel/masters/*
+!/assets/pixel/masters/keyposes-seven/
+!/assets/pixel/masters/keyposes-lead/
+!/assets/pixel/masters/pose-imports.json
+!/assets/pixel/masters/keypose-exact-bounds.json
+/assets/pixel/masters/keyposes-seven/*
+!/assets/pixel/masters/keyposes-seven/*.png
+/assets/pixel/masters/keyposes-lead/*
+!/assets/pixel/masters/keyposes-lead/*.png
+/scripts/pixel-import.cjs
+/scripts/pixel-normalize.cjs

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "characterCount": 15,
+  "characters": [
+    {
+      "id": "shoga",
+      "name": "しょうが"
+    },
+    {
+      "id": "garlic",
+      "name": "にんにく"
+    },
+    {
+      "id": "negi",
+      "name": "ネギ"
+    },
+    {
+      "id": "tube",
+      "name": "カラシ"
+    },
+    {
+      "id": "wasabi",
+      "name": "ワサビ"
+    },
+    {
+      "id": "chili",
+      "name": "唐辛子"
+    },
+    {
+      "id": "daikon",
+      "name": "大根"
+    },
+    {
+      "id": "grater",
+      "name": "おろし器"
+    },
+    {
+      "id": "whale",
+      "name": "サンショウ"
+    },
+    {
+      "id": "sudachi",
+      "name": "すだち"
+    },
+    {
+      "id": "yuzu",
+      "name": "ゆず"
+    },
+    {
+      "id": "myoga",
+      "name": "ミョウガ"
+    },
+    {
+      "id": "okra",
+      "name": "オクラ"
+    },
+    {
+      "id": "shiso",
+      "name": "シソ"
+    },
+    {
+      "id": "oba",
+      "name": "大葉"
+    }
+  ],
+  "aliases": {
+    "ginger": "shoga",
+    "leek": "negi",
+    "mustard": "tube",
+    "sansho": "whale"
+  },
+  "referenceNotes": [
+    "Original group art and inspected manga establish the fifteen primary design slots; not an exhaustive background cast census",
+    "whaleは35話で名乗るサンショウウオのサンショウ。互換IDを保持",
+    "tubeは10話の黄色縞チューブのカラシ",
+    "オクラ輪切りと緑ワサビチューブはそれぞれ同キャラの差分",
+    "シソと大葉は57話で別々に名乗る。独立葉立ち絵は未確認のためデザイン根拠を保持"
+  ]
+}

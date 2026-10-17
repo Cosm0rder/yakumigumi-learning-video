@@ -15,7 +15,7 @@
 1. GitHubの緑色の **Code → Download ZIP** で取得して展開するか、次のコマンドで取得します。
 
 ```sh
-git clone https://github.com/Cosm0rder/yakumigumi-learning-video.git
+git clone --branch assets/all-character-motions https://github.com/Cosm0rder/yakumigumi-learning-video.git
 cd yakumigumi-learning-video
 npm ci --ignore-scripts --no-audit --no-fund
 npm run doctor
@@ -89,6 +89,22 @@ npm run characters
 ```
 
 で同じ素材を `output/characters/` に再生成できます。`src/movie.cjs` の `createCharacterAnimation()` を呼ぶだけでも使えます。
+
+## 紹介動画に使える15キャラ × 10モーション
+
+`assets/pixel/` に、15キャラ各10モーションと、ワサビのチューブ姿・オクラの輪切り姿各10モーションの **計170モーション** の原画と生成コードを追加しました。待機・まばたき・移動・喜ぶ・驚く・困る・考える・話す・説明・おじぎを、描き分けた表情とポーズで収録しています。
+
+[素材ギャラリー](docs/pixel-gallery.html) と [ブラウザーサンプル](examples/pixel-player.html) は、初回生成後にファイルを直接開いて再生できます。**Gitから取得した直後は、ギャラリー・新API・テストの利用前に `npm run pixel:build` を実行してください。** 透過PNGシート・個別フレーム・GIF／APNGは再生成する構成で、Gitには17原画PNGと170正規化ポーズ、必要なメタデータを保持します。[素材仕様とコード例](docs/PIXEL-ASSETS.md)、[キャラ名と原作の確認根拠](docs/PIXEL-ROSTER.md) も参照してください。
+
+```sh
+npm run pixel:build         # 初回に全170モーションの利用素材を生成
+npm run pixel:demo -- shoga  # しょうがの10動作を並べた4秒MP4
+npm run pixel:cast          # 15キャラを10動作順に見せる20秒MP4
+```
+
+新原画は ImageGen による多色・部分透明を含むピクセル風画像です。元PNGを保持し、nearest-neighborで配置しています。既存のしょうが8モーションと動画レンダラーも引き続き利用できます。
+
+生成済み素材は用途別のDrive納品パックでも提供します。公開checkoutでは上記の `npm run pixel:build` で同じ形式の素材を再生成できます。
 
 ## ClaudeとGoogle AI Studioを使いたい場合
 
