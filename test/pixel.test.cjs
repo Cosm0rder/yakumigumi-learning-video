@@ -94,6 +94,32 @@ function gifInfo(filename){
 function pixels(canvas){
   return Buffer.from(canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data);
 }
+function rgbaDifference(actual,expected,width){
+  assert.equal(actual.length,expected.length,'RGBA diagnostic dimensions');
+  const channels=[0,0,0,0],maxDelta=[0,0,0,0],examples=[];
+  let pixelsChanged=0,alphaChanged=0,opaqueRgbChanged=0,partialRgbChanged=0,transparentRgbChanged=0;
+  const bounds=[Infinity,Infinity,-1,-1];
+  for(let offset=0;offset<actual.length;offset+=4){
+    let changed=false,rgbChanged=false;
+    for(let channel=0;channel<4;channel++){
+      const delta=Math.abs(actual[offset+channel]-expected[offset+channel]);
+      if(delta){channels[channel]++;maxDelta[channel]=Math.max(maxDelta[channel],delta);changed=true;if(channel<3)rgbChanged=true;}
+    }
+    if(!changed)continue;
+    pixelsChanged++;
+    const pixel=offset/4,x=pixel%width,y=Math.floor(pixel/width);
+    bounds[0]=Math.min(bounds[0],x);bounds[1]=Math.min(bounds[1],y);bounds[2]=Math.max(bounds[2],x);bounds[3]=Math.max(bounds[3],y);
+    const aa=actual[offset+3],ea=expected[offset+3];
+    if(aa!==ea)alphaChanged++;
+    if(rgbChanged){
+      if(aa===255&&ea===255)opaqueRgbChanged++;
+      else if(aa===0&&ea===0)transparentRgbChanged++;
+      else partialRgbChanged++;
+    }
+    if(examples.length<8)examples.push({x,y,actual:[...actual.subarray(offset,offset+4)],expected:[...expected.subarray(offset,offset+4)]});
+  }
+  return {pixelsChanged,channels,maxDelta,alphaChanged,opaqueRgbChanged,partialRgbChanged,transparentRgbChanged,bounds:pixelsChanged?bounds:null,examples};
+}
 function assertTransparentContent(canvas,label){
   const data=pixels(canvas);
   assert.equal(data[3],0,`${label}: top-left background must be transparent`);
@@ -208,7 +234,23 @@ test('all characters and variants use ten distinct supplied poses with exact sou
       const filename=assetFile(entry.keyposes[action]);assertRgbaPng(filename,256,256);
       const actual=createCanvas(256,256);actual.getContext('2d').drawImage(await loadImage(filename),0,0);
       assertTransparentContent(actual,label);
-      assert.ok(pixels(actual).equals(pixels(expected)),`${label}: pose must be sampled from the original pixels without chroma replacement or facial redraw`);
+      const actualPixels=pixels(actual),expectedPixels=pixels(expected);
+      const exact=actualPixels.equals(expectedPixels);
+      let diagnostics='';
+      if(!exact){
+        const encodedExpected=expected.toBuffer('image/png');
+        const roundTrip=createCanvas(256,256);
+        roundTrip.getContext('2d').drawImage(await loadImage(encodedExpected),0,0);
+        const roundTripPixels=pixels(roundTrip);
+        diagnostics='; RGBA diagnostics '+JSON.stringify({
+          platform:process.platform,arch:process.arch,node:process.version,
+          actualPngSha256:sha256(fs.readFileSync(filename)),expectedPngSha256:sha256(encodedExpected),
+          actualVsExpectedRaw:rgbaDifference(actualPixels,expectedPixels,256),
+          actualVsExpectedPngRoundTrip:rgbaDifference(actualPixels,roundTripPixels,256),
+          expectedRawVsPngRoundTrip:rgbaDifference(expectedPixels,roundTripPixels,256)
+        });
+      }
+      assert.ok(exact,`${label}: pose must be sampled from the original pixels without chroma replacement or facial redraw${diagnostics}`);
       fileHashes.push(sha256(fs.readFileSync(filename)));pixelHashes.push(sha256(pixels(actual)));
     }
     assert.equal(new Set(fileHashes).size,10,`${id}: ten different pose PNG SHA256 values`);
